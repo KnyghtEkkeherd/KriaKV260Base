@@ -1,0 +1,16 @@
+set_property SRC_FILE_INFO {cfile:/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_clk_wiz_0_0/kria_bd_clk_wiz_0_0.xdc rfile:../../../../../kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_clk_wiz_0_0/kria_bd_clk_wiz_0_0.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_clk_wiz_0_0_synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:2} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:53 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 10.000 -name clk_in1 [get_ports clk_in1]
+current_instance inst
+set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
+set_property PHASESHIFT_MODE LATENCY [get_cells mmcme4_adv_inst]
+current_instance
+set_property src_info {type:PI file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
+create_generated_clock -name clkfbout_kria_bd_clk_wiz_0_0 -source [get_pins inst/mmcme4_adv_inst/CLKIN1] -multiply_by 1 -add -master_clock [get_clocks clk_in1] [get_pins inst/mmcme4_adv_inst/CLKFBOUT]
+set_property src_info {type:PI file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
+create_generated_clock -name clk_out1_kria_bd_clk_wiz_0_0 -source [get_pins inst/mmcme4_adv_inst/CLKIN1] -multiply_by 2 -add -master_clock [get_clocks clk_in1] [get_pins inst/mmcme4_adv_inst/CLKOUT0]
+set_property src_info {type:PI file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
+create_generated_clock -name clk_out2_kria_bd_clk_wiz_0_0 -source [get_pins inst/mmcme4_adv_inst/CLKIN1] -multiply_by 1 -add -master_clock [get_clocks clk_in1] [get_pins inst/mmcme4_adv_inst/CLKOUT1]
+set_property src_info {type:XDC file:2 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property KEEP_HIERARCHY SOFT [get_cells inst]

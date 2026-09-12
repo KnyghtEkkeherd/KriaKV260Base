@@ -1,0 +1,830 @@
+
+*** Running vivado
+    with args -log kria_bd_axi_intc_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kria_bd_axi_intc_0_0.tcl
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 04-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Sep 11 23:54:19 2026
+# Process ID         : 26565
+# Current directory  : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1
+# Command line       : vivado -log kria_bd_axi_intc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kria_bd_axi_intc_0_0.tcl
+# Log file           : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/kria_bd_axi_intc_0_0.vds
+# Journal file       : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/vivado.jou
+# Running On         : cachyos-x8664
+# Platform           : cachyos
+# Operating System   : CachyOS
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency      : 4178.989 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16703 MB
+# Swap memory        : 16702 MB
+# Total Virtual      : 33406 MB
+# Available Virtual  : 26601 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Fri Sep 11 23:54:19 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source kria_bd_axi_intc_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1739.617 ; gain = 268.059 ; free physical = 1409 ; free virtual = 21328
+Command: synth_design -top kria_bd_axi_intc_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27125
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2953.516 ; gain = 169.766 ; free physical = 135 ; free virtual = 9342
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kria_bd_axi_intc_0_0' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/synth/kria_bd_axi_intc_0_0.vhd:85]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_INSTANCE bound to: kria_bd_axi_intc_0_0 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 1 - type: integer 
+	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111111111111110 
+	Parameter C_KIND_OF_EDGE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_KIND_OF_LVL bound to: 32'b11111111111111111111111111111111 
+	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111111111111110 
+	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_IVAR_RESET_VALUE bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
+	Parameter C_ENABLE_ASYNC bound to: 0 - type: integer 
+	Parameter C_HAS_IPR bound to: 1 - type: integer 
+	Parameter C_HAS_SIE bound to: 1 - type: integer 
+	Parameter C_HAS_CIE bound to: 1 - type: integer 
+	Parameter C_HAS_IVR bound to: 1 - type: integer 
+	Parameter C_HAS_ILR bound to: 0 - type: integer 
+	Parameter C_IRQ_IS_LEVEL bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE bound to: 1'b1 
+	Parameter C_DISABLE_SYNCHRONIZERS bound to: 1 - type: integer 
+	Parameter C_MB_CLK_NOT_CONNECTED bound to: 1 - type: integer 
+	Parameter C_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_EN_CASCADE_MODE bound to: 0 - type: integer 
+	Parameter C_CASCADE_MASTER bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_intc' declared at '/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:3442' bound to instance 'U0' of component 'axi_intc' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/synth/kria_bd_axi_intc_0_0.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'axi_intc' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:3543]
+INFO: [Synth 8-638] synthesizing module 'intc_core' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:786]
+INFO: [Synth 8-256] done synthesizing module 'intc_core' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:786]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2341]
+INFO: [Synth 8-3919] null assignment ignored [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2370]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_intc' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:3543]
+INFO: [Synth 8-256] done synthesizing module 'kria_bd_axi_intc_0_0' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/synth/kria_bd_axi_intc_0_0.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element ack_or_reg was removed.  [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:2674]
+INFO: [Synth 8-7129] Port A[1] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[2] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[3] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[4] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[5] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[6] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[7] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[8] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[2] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[3] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[4] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[5] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[6] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[7] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[8] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[3] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[4] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[5] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[6] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[7] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[8] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus_RNW in module address_decoder is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[3] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[4] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[5] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[10] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[11] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[12] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[13] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[1] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[6] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[8] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[9] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[10] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[11] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[12] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[13] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[31] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[30] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[29] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[28] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[27] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[26] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[25] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[24] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[23] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[22] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[21] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[20] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[19] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[13] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[12] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[11] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[10] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[9] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[8] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[7] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[6] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[5] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[4] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[3] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[2] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Processor_clk in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port processor_rst in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Processor_ack[1] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Processor_ack[0] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[31] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[30] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[29] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[28] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[27] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[26] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[25] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[24] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[23] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[22] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[21] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[20] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[19] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[13] in module intc_core is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 3051.484 ; gain = 267.734 ; free physical = 123 ; free virtual = 8105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 3051.484 ; gain = 267.734 ; free physical = 122 ; free virtual = 8097
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 3051.484 ; gain = 267.734 ; free physical = 122 ; free virtual = 8097
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3051.484 ; gain = 0.000 ; free physical = 125 ; free virtual = 8093
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_ooc.xdc] for cell 'U0'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3136.316 ; gain = 22.812 ; free physical = 150 ; free virtual = 7545
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_clocks.xdc] for cell 'U0'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3136.316 ; gain = 0.000 ; free physical = 163 ; free virtual = 7538
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.24 . Memory (MB): peak = 3136.352 ; gain = 0.000 ; free physical = 156 ; free virtual = 7497
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 3136.352 ; gain = 352.602 ; free physical = 152 ; free virtual = 7250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 3144.320 ; gain = 360.570 ; free physical = 158 ; free virtual = 7242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 3144.320 ; gain = 360.570 ; free physical = 155 ; free virtual = 7242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 3144.320 ; gain = 360.570 ; free physical = 186 ; free virtual = 7240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 45    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 3144.320 ; gain = 360.570 ; free physical = 151 ; free virtual = 7074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 3778.387 ; gain = 994.637 ; free physical = 161 ; free virtual = 3187
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 3816.441 ; gain = 1032.691 ; free physical = 125 ; free virtual = 2483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 3816.441 ; gain = 1032.691 ; free physical = 126 ; free virtual = 2421
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+
+*** Running vivado
+    with args -log kria_bd_axi_intc_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kria_bd_axi_intc_0_0.tcl
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 04-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Sep 11 23:57:43 2026
+# Process ID         : 29135
+# Current directory  : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1
+# Command line       : vivado -log kria_bd_axi_intc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kria_bd_axi_intc_0_0.tcl
+# Log file           : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/kria_bd_axi_intc_0_0.vds
+# Journal file       : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/vivado.jou
+# Running On         : cachyos-x8664
+# Platform           : cachyos
+# Operating System   : CachyOS
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency      : 4091.699 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16703 MB
+# Swap memory        : 16702 MB
+# Total Virtual      : 33406 MB
+# Available Virtual  : 25583 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Fri Sep 11 23:57:43 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source kria_bd_axi_intc_0_0.tcl -notrace
+Command: synth_design -top kria_bd_axi_intc_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29474
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2953.586 ; gain = 169.766 ; free physical = 4965 ; free virtual = 21126
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'kria_bd_axi_intc_0_0' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/synth/kria_bd_axi_intc_0_0.vhd:85]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_INSTANCE bound to: kria_bd_axi_intc_0_0 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 1 - type: integer 
+	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111111111111110 
+	Parameter C_KIND_OF_EDGE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_KIND_OF_LVL bound to: 32'b11111111111111111111111111111111 
+	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111111111111110 
+	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_IVAR_RESET_VALUE bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
+	Parameter C_ENABLE_ASYNC bound to: 0 - type: integer 
+	Parameter C_HAS_IPR bound to: 1 - type: integer 
+	Parameter C_HAS_SIE bound to: 1 - type: integer 
+	Parameter C_HAS_CIE bound to: 1 - type: integer 
+	Parameter C_HAS_IVR bound to: 1 - type: integer 
+	Parameter C_HAS_ILR bound to: 0 - type: integer 
+	Parameter C_IRQ_IS_LEVEL bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE bound to: 1'b1 
+	Parameter C_DISABLE_SYNCHRONIZERS bound to: 1 - type: integer 
+	Parameter C_MB_CLK_NOT_CONNECTED bound to: 1 - type: integer 
+	Parameter C_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_EN_CASCADE_MODE bound to: 0 - type: integer 
+	Parameter C_CASCADE_MASTER bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_intc' declared at '/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:3442' bound to instance 'U0' of component 'axi_intc' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/synth/kria_bd_axi_intc_0_0.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'axi_intc' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:3543]
+INFO: [Synth 8-638] synthesizing module 'intc_core' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:786]
+INFO: [Synth 8-256] done synthesizing module 'intc_core' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:786]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2341]
+INFO: [Synth 8-3919] null assignment ignored [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2370]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_intc' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:3543]
+INFO: [Synth 8-256] done synthesizing module 'kria_bd_axi_intc_0_0' (0#1) [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/synth/kria_bd_axi_intc_0_0.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element ack_or_reg was removed.  [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ipshared/ca9d/hdl/axi_intc_v4_1_rfs.vhd:2674]
+INFO: [Synth 8-7129] Port A[1] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[2] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[3] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[4] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[5] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[6] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[7] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[8] in module pselect_f__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[2] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[3] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[4] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[5] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[6] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[7] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[8] in module pselect_f__parameterized16 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[3] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[4] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[5] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[6] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[7] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[8] in module pselect_f is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus_RNW in module address_decoder is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[3] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[4] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[5] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[10] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[11] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[12] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[13] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_rdce[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[1] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[6] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[8] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[9] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[10] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[11] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[12] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[13] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2ip_wrce[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[31] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[30] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[29] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[28] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[27] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[26] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[25] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[24] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[23] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[22] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[21] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[20] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[19] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[13] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[12] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[11] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[10] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[9] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[8] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[7] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[6] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[5] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[4] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[3] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Wr_data[2] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Processor_clk in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port processor_rst in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Processor_ack[1] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Processor_ack[0] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[31] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[30] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[29] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[28] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[27] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[26] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[25] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[24] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[23] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[22] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[21] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[20] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[19] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[18] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[17] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[16] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[15] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[14] in module intc_core is either unconnected or has no load
+INFO: [Synth 8-7129] Port Interrupt_address_in[13] in module intc_core is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3051.555 ; gain = 267.734 ; free physical = 4396 ; free virtual = 20635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3051.555 ; gain = 267.734 ; free physical = 4303 ; free virtual = 20533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3051.555 ; gain = 267.734 ; free physical = 4301 ; free virtual = 20531
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3051.555 ; gain = 0.000 ; free physical = 4236 ; free virtual = 20463
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_ooc.xdc] for cell 'U0'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3144.387 ; gain = 23.812 ; free physical = 3921 ; free virtual = 20061
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_clocks.xdc] for cell 'U0'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3144.387 ; gain = 0.000 ; free physical = 3921 ; free virtual = 20061
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3144.422 ; gain = 0.000 ; free physical = 3920 ; free virtual = 20061
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3144.422 ; gain = 360.602 ; free physical = 3949 ; free virtual = 20172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3152.391 ; gain = 368.570 ; free physical = 3948 ; free virtual = 20171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3152.391 ; gain = 368.570 ; free physical = 3948 ; free virtual = 20171
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 3152.391 ; gain = 368.570 ; free physical = 3938 ; free virtual = 20168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 45    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 3152.391 ; gain = 368.570 ; free physical = 3956 ; free virtual = 20197
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 3788.395 ; gain = 1004.574 ; free physical = 3495 ; free virtual = 19659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 3819.441 ; gain = 1035.621 ; free physical = 3489 ; free virtual = 19629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 3819.441 ; gain = 1035.621 ; free physical = 3489 ; free virtual = 19629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3277 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3277 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3277 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3277 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3277 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3277 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    14|
+|3     |LUT3 |    30|
+|4     |LUT4 |    12|
+|5     |LUT5 |     9|
+|6     |LUT6 |    22|
+|7     |FDRE |    62|
+|8     |FDSE |     2|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3277 ; free virtual = 19446
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 4004.254 ; gain = 1127.566 ; free physical = 3265 ; free virtual = 19441
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 4004.254 ; gain = 1220.434 ; free physical = 3265 ; free virtual = 19441
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4004.254 ; gain = 0.000 ; free physical = 3263 ; free virtual = 19441
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4004.254 ; gain = 0.000 ; free physical = 3359 ; free virtual = 19589
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 367c9e4
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+175 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 4004.254 ; gain = 2242.012 ; free physical = 3356 ; free virtual = 19587
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2742.936; main = 2742.936; forked = 218.537
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4553.242; main = 3978.297; forked = 1034.953
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4004.254 ; gain = 0.000 ; free physical = 3356 ; free virtual = 19587
+INFO: [Common 17-1381] The checkpoint '/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/kria_bd_axi_intc_0_0.dcp' has been generated.
+INFO: [Ipptcl 7-1612] Added synthesis output to IP cache for IP kria_bd_axi_intc_0_0, cache-ID = 53f82a947167d122
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4004.254 ; gain = 0.000 ; free physical = 3266 ; free virtual = 19503
+INFO: [Common 17-1381] The checkpoint '/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/kria_bd_axi_intc_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file kria_bd_axi_intc_0_0_utilization_synth.rpt -pb kria_bd_axi_intc_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 11 23:58:40 2026...

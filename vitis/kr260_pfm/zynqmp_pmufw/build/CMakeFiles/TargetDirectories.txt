@@ -1,0 +1,3 @@
+/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/build/CMakeFiles/pmufw.elf.dir
+/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/build/CMakeFiles/edit_cache.dir
+/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/build/CMakeFiles/rebuild_cache.dir

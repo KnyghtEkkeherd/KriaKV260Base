@@ -1,0 +1,72 @@
+{
+  "name": "kr260_pfm",
+  "type": "PLATFORM",
+  "configuration": {
+    "description": "",
+    "xsa": "/home/user/workspace/vivado/kr260/kria_bd_wrapper.xsa",
+    "xsaPathInPlatform": "kr260_pfm/hw/kria_bd_wrapper.xsa",
+    "emulationXsa": "",
+    "emulationXsaPathInPlatform": "",
+    "isCustomFSBL": false,
+    "fsblPath": "",
+    "pmufwElf": "",
+    "flow": "EMBEDDED_ACCEL",
+    "processorsMap": {
+      "psu_cortexa53_0": "psu_cortexa53",
+      "psu_cortexa53_1": "psu_cortexa53",
+      "psu_cortexa53_2": "psu_cortexa53",
+      "psu_cortexa53_3": "psu_cortexa53",
+      "psu_cortexr5_0": "psu_cortexr5",
+      "psu_cortexr5_1": "psu_cortexr5",
+      "psu_pmu_0": "psu_pmu"
+    },
+    "supportedFamily": "zynquplus",
+    "componentType": "PLATFORM",
+    "domains": [
+      {
+        "name": "zynqmp_fsbl",
+        "displayName": "zynqmp_fsbl",
+        "processor": "psu_cortexa53_0",
+        "cpuType": "cortex-a53",
+        "cpuInstance": "psu_cortexa53_0",
+        "os": "standalone",
+        "appTemplate": "zynqmp_fsbl",
+        "isBootDomain": true,
+        "qemuData": "/home/user/workspace/vitis/kr260_pfm/resources/zynqmp_fsbl/qemu",
+        "qemuArgsFile": "/home/user/workspace/vitis/kr260_pfm/resources/zynqmp_fsbl/qemu/qemu_args.txt",
+        "pmcQemuArgsFile": "/home/user/workspace/vitis/kr260_pfm/resources/zynqmp_fsbl/qemu/pmu_args.txt",
+        "isBSPGenReq": false
+      },
+      {
+        "name": "zynqmp_pmufw",
+        "displayName": "zynqmp_pmufw",
+        "processor": "psu_pmu_0",
+        "cpuType": "psu_pmu",
+        "cpuInstance": "psu_pmu_0",
+        "os": "standalone",
+        "appTemplate": "zynqmp_pmufw",
+        "isBootDomain": true,
+        "qemuData": "/home/user/workspace/vitis/kr260_pfm/resources/zynqmp_pmufw/qemu",
+        "qemuArgsFile": "/home/user/workspace/vitis/kr260_pfm/resources/zynqmp_pmufw/qemu/qemu_args.txt",
+        "pmcQemuArgsFile": "/home/user/workspace/vitis/kr260_pfm/resources/zynqmp_pmufw/qemu/pmu_args.txt",
+        "isBSPGenReq": false
+      },
+      {
+        "name": "linux_psu_cortexa53",
+        "displayName": "linux_psu_cortexa53",
+        "processor": "psu_cortexa53",
+        "cpuType": "cortex-a53",
+        "cpuInstance": "psu_cortexa53",
+        "os": "linux",
+        "qemuData": "",
+        "qemuArgsFile": "/home/user/workspace/vitis/kr260_pfm/resources/linux_psu_cortexa53/qemu/qemu_args.txt",
+        "pmcQemuArgsFile": "/home/user/workspace/vitis/kr260_pfm/resources/linux_psu_cortexa53/qemu/pmu_args.txt",
+        "bifFile": "/home/user/workspace/vitis/kr260_pfm/resources/linux_psu_cortexa53/linux.bif",
+        "bootDirectory": "/home/user/local-extract/xilinx-zynqmp-common-v2024.1",
+        "sdCardDirectory": "",
+        "customDtb": "/home/user/workspace/vitis/kr260_pfm/system.dtb"
+      }
+    ],
+    "emptyToolchainConfiguration": []
+  }
+}

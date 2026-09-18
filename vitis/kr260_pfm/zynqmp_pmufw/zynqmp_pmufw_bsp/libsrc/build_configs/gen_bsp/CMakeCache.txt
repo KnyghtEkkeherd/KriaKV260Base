@@ -32,7 +32,7 @@ CMAKE_ASM_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin
 CMAKE_ASM_COMPILER_RANLIB:FILEPATH=CMAKE_ASM_COMPILER_RANLIB-NOTFOUND
 
 //ASMFLAGS
-CMAKE_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the ASM compiler during DEBUG builds.
 CMAKE_ASM_FLAGS_DEBUG:STRING=-g
@@ -62,7 +62,7 @@ CMAKE_CXX_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin
 CMAKE_CXX_COMPILER_RANLIB:FILEPATH=CMAKE_CXX_COMPILER_RANLIB-NOTFOUND
 
 //CXXFLAGS
-CMAKE_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -85,7 +85,7 @@ CMAKE_C_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/b
 CMAKE_C_COMPILER_RANLIB:FILEPATH=CMAKE_C_COMPILER_RANLIB-NOTFOUND
 
 //CFLAGS
-CMAKE_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
@@ -263,13 +263,13 @@ SCUGIC_DIR:PATH=SCUGIC_DIR-NOTFOUND
 SUBDIR_LIST:STRING=ALL
 
 //ASM FLAGS
-TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //CXXFLAGS
-TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //CFLAGS
-TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //Flags used by compiler to generate dependency files
 TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP
@@ -352,10 +352,10 @@ XILSKEY_use_puf_hd_as_user_efuse:BOOL=OFF
 XILTIMER_en_interval_timer:BOOL=OFF
 
 //This parameter is used to select specific timer for sleep functionality
-XILTIMER_sleep_timer:STRING=Default
+XILTIMER_sleep_timer:STRING=psu_ttc_3
 
 //This parameter is used to select specific timer for tick functionality
-XILTIMER_tick_timer:STRING=None
+XILTIMER_tick_timer:STRING=psu_ttc_2
 
 //Yocto based embeddedsw FLOW
 YOCTO:BOOL=OFF
@@ -496,7 +496,7 @@ proc_assembler:STRING=mb-gcc
 proc_compiler:STRING=mb-gcc
 
 //Compiler Flags
-proc_compiler_flags:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c
+proc_compiler_flags:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c
 
 //Extra Compiler Flags
 proc_extra_compiler_flags:STRING= -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns
@@ -787,7 +787,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=39
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=40
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

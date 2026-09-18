@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/default_timer/cmake_install.cmake")
+  include("/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/core/ttcps/cmake_install.cmake")
 
 endif()
 

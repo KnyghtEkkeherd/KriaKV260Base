@@ -72,19 +72,19 @@ include libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/progress.make
 # Include the compile flags for this target's objects.
 include libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/flags.make
 
-libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/flags.make
-libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/default_timer/microblaze_sleep.c
-libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj"
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj -MF CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj.d -o CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/default_timer/microblaze_sleep.c
+libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/flags.make
+libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/ttcps/ttcps.c
+libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj"
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj -MF CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj.d -o CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/ttcps/ttcps.c
 
-libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.i"
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/default_timer/microblaze_sleep.c > CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.i
+libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.i"
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/ttcps/ttcps.c > CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.i
 
-libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.s"
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/default_timer/microblaze_sleep.c -o CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.s
+libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.s"
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/ttcps/ttcps.c -o CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.s
 
 libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/flags.make
 libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/xiltimer.c
@@ -102,13 +102,13 @@ libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.s: cmake_force
 
 # Object files for target xiltimer
 xiltimer_OBJECTS = \
-"CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj" \
+"CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj" \
 "CMakeFiles/xiltimer.dir/xiltimer.c.obj"
 
 # External object files for target xiltimer
 xiltimer_EXTERNAL_OBJECTS =
 
-libsrc/xiltimer/src/libxiltimer.a: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj
+libsrc/xiltimer/src/libxiltimer.a: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj
 libsrc/xiltimer/src/libxiltimer.a: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj
 libsrc/xiltimer/src/libxiltimer.a: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make
 libsrc/xiltimer/src/libxiltimer.a: libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/link.txt

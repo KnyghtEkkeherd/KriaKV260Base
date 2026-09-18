@@ -178,6 +178,30 @@ xilstandalone/fast:
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build.make libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build
 .PHONY : xilstandalone/fast
 
+common/clocking/xil_clocking.obj: common/clocking/xil_clocking.c.obj
+.PHONY : common/clocking/xil_clocking.obj
+
+# target to build an object file
+common/clocking/xil_clocking.c.obj:
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build.make libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj
+.PHONY : common/clocking/xil_clocking.c.obj
+
+common/clocking/xil_clocking.i: common/clocking/xil_clocking.c.i
+.PHONY : common/clocking/xil_clocking.i
+
+# target to preprocess a source file
+common/clocking/xil_clocking.c.i:
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build.make libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.i
+.PHONY : common/clocking/xil_clocking.c.i
+
+common/clocking/xil_clocking.s: common/clocking/xil_clocking.c.s
+.PHONY : common/clocking/xil_clocking.s
+
+# target to generate assembly for a file
+common/clocking/xil_clocking.c.s:
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build.make libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.s
+.PHONY : common/clocking/xil_clocking.c.s
+
 common/inbyte.obj: common/inbyte.c.obj
 .PHONY : common/inbyte.obj
 
@@ -759,6 +783,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... xilstandalone"
+	@echo "... common/clocking/xil_clocking.obj"
+	@echo "... common/clocking/xil_clocking.i"
+	@echo "... common/clocking/xil_clocking.s"
 	@echo "... common/inbyte.obj"
 	@echo "... common/inbyte.i"
 	@echo "... common/inbyte.s"

@@ -20,7 +20,9 @@ libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj: \
  /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xstatus.h \
  /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/bspconfig.h \
  /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xil_util.h \
- /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xil_io.h
+ /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xil_io.h \
+ /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xttcps.h \
+ /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xttcps_hw.h
 /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xil_io.h:
 /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xil_types.h:
 /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/bspconfig.h:
@@ -42,3 +44,5 @@ libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj: \
 /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/bspconfig.h:
 /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xil_util.h:
 /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xil_io.h:
+/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xttcps.h:
+/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include/xttcps_hw.h:

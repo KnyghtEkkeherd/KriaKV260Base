@@ -20,6 +20,8 @@ collect(PROJECT_LIB_DEPS xilstandalone;xiltimer;xilffs;xilsecure;xilpm)
 
 
 
+
+
 collect(PROJECT_LIB_DEPS gcc)
 collect(PROJECT_LIB_DEPS c)
 list (APPEND _deps ${USER_LINK_LIBRARIES})
@@ -53,10 +55,10 @@ add_executable(${APP_NAME}.elf ${S_SOURCES} ${_sources})
 
 if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "cortexa53")
   set_target_properties(${APP_NAME}.elf PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/lscript_a53.ld)
-  target_link_libraries(${APP_NAME}.elf -Os -flto -ffat-lto-objects -Wl,--gc-sections -n -T\"${CMAKE_SOURCE_DIR}/lscript_a53.ld\" -L\"${CMAKE_LIBRARY_PATH}/\" -L\"${USER_LINK_DIRECTORIES}/\" -Wl,--start-group ${_deps} -Wl,--end-group)
+  target_link_libraries(${APP_NAME}.elf -Os -flto=1 -ffat-lto-objects -Wl,--gc-sections -n -T\"${CMAKE_SOURCE_DIR}/lscript_a53.ld\" -L\"${CMAKE_LIBRARY_PATH}/\" -L\"${USER_LINK_DIRECTORIES}/\" -Wl,--start-group ${_deps} -Wl,--end-group)
 else()
   set_target_properties(${APP_NAME}.elf PROPERTIES LINK_DEPENDS ${USER_LINKER_SCRIPT})
-  target_link_libraries(${APP_NAME}.elf -Os -flto -ffat-lto-objects -Wl,--gc-sections -n -T\"${USER_LINKER_SCRIPT}\" -L\"${CMAKE_LIBRARY_PATH}/\" -L\"${USER_LINK_DIRECTORIES}/\" -Wl,--start-group ${_deps} -Wl,--end-group)
+  target_link_libraries(${APP_NAME}.elf -Os -flto=1 -ffat-lto-objects -Wl,--gc-sections -n -T\"${USER_LINKER_SCRIPT}\" -L\"${CMAKE_LIBRARY_PATH}/\" -L\"${USER_LINK_DIRECTORIES}/\" -Wl,--start-group ${_deps} -Wl,--end-group)
 endif()
 
 target_compile_definitions(${APP_NAME}.elf PUBLIC ${USER_COMPILE_DEFINITIONS})

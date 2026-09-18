@@ -148,10 +148,10 @@ proc_config:
       type: string
       value: ' -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder
         -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os
-        -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c'
+        -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c'
       default: ' -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder
         -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os
-        -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c'
+        -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c'
       options: []
       description: Compiler Flags
     proc_extra_compiler_flags:
@@ -455,8 +455,8 @@ lib_config:
       name: XILTIMER_sleep_timer
       permission: read_write
       type: string
-      value: Default
-      default: Default
+      value: psu_ttc_3
+      default: psu_ttc_3
       options:
       - Default
       - psu_ttc_3
@@ -468,8 +468,8 @@ lib_config:
       name: XILTIMER_tick_timer
       permission: read_write
       type: string
-      value: None
-      default: None
+      value: psu_ttc_2
+      default: psu_ttc_2
       options:
       - None
       - psu_ttc_3

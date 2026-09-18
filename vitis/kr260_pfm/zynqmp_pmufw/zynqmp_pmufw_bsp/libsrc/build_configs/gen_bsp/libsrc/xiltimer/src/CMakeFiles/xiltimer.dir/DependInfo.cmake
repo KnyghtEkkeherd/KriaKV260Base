@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/default_timer/microblaze_sleep.c" "libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj" "gcc" "libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj.d"
+  "/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/core/ttcps/ttcps.c" "libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj" "gcc" "libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj.d"
   "/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src/xiltimer.c" "libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj" "gcc" "libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj.d"
   )
 

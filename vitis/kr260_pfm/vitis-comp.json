@@ -64,7 +64,7 @@
         "bifFile": "/home/user/workspace/vitis/kr260_pfm/resources/linux_psu_cortexa53/linux.bif",
         "bootDirectory": "/home/user/local-extract/xilinx-zynqmp-common-v2024.1",
         "sdCardDirectory": "",
-        "customDtb": "/home/user/workspace/vitis/kr260_pfm/system.dtb"
+        "customDtb": "/home/user/workspace/system.dtb"
       }
     ],
     "emptyToolchainConfiguration": []

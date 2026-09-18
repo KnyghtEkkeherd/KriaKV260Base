@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj"
+  "CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj.d"
   "CMakeFiles/xilstandalone.dir/common/inbyte.c.obj"
   "CMakeFiles/xilstandalone.dir/common/inbyte.c.obj.d"
   "CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj"

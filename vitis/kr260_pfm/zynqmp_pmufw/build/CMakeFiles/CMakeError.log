@@ -1,6 +1,6 @@
 Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
 Compiler: /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc 
-Build flags: ;-O2;;-mlittle-endian;-mxl-barrel-shift;-mxl-pattern-compare;-mxl-reorder;-mxl-soft-mul;-mxl-soft-div;-O2;-pipe;-g;-feliminate-unused-debug-types;-Os;-flto;-ffat-lto-objects;-DPSU_PMU=1U;-mcpu=v9.2;-DSDT;;-MMD;-MP;-specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec;-I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+Build flags: ;-O2;;-mlittle-endian;-mxl-barrel-shift;-mxl-pattern-compare;-mxl-reorder;-mxl-soft-mul;-mxl-soft-div;-O2;-pipe;-g;-feliminate-unused-debug-types;-Os;-flto=1;-ffat-lto-objects;-DPSU_PMU=1U;-mcpu=v9.2;-DSDT;;-MMD;-MP;-specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec;-I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 Id flags:  
 
 The output was:
@@ -13,7 +13,7 @@ The C compiler identification could not be found in "/home/user/workspace/vitis/
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
 Compiler: /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-g++ 
-Build flags: ;-O2;;-mlittle-endian;-mxl-barrel-shift;-mxl-pattern-compare;-mxl-reorder;-mxl-soft-mul;-mxl-soft-div;-O2;-pipe;-g;-feliminate-unused-debug-types;-Os;-flto;-ffat-lto-objects;-DPSU_PMU=1U;-mcpu=v9.2;-DSDT;;-MMD;-MP;-specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec;-I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+Build flags: ;-O2;;-mlittle-endian;-mxl-barrel-shift;-mxl-pattern-compare;-mxl-reorder;-mxl-soft-mul;-mxl-soft-div;-O2;-pipe;-g;-feliminate-unused-debug-types;-Os;-flto=1;-ffat-lto-objects;-DPSU_PMU=1U;-mcpu=v9.2;-DSDT;;-MMD;-MP;-specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec;-I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 Id flags:  
 
 The output was:

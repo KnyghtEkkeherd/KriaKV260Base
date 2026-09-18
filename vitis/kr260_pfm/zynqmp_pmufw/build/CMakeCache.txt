@@ -29,7 +29,7 @@ CMAKE_ASM_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin
 CMAKE_ASM_COMPILER_RANLIB:FILEPATH=CMAKE_ASM_COMPILER_RANLIB-NOTFOUND
 
 //ASMFLAGS
-CMAKE_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the ASM compiler during DEBUG builds.
 CMAKE_ASM_FLAGS_DEBUG:STRING=-g
@@ -59,7 +59,7 @@ CMAKE_CXX_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin
 CMAKE_CXX_COMPILER_RANLIB:FILEPATH=CMAKE_CXX_COMPILER_RANLIB-NOTFOUND
 
 //CXXFLAGS
-CMAKE_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -82,7 +82,7 @@ CMAKE_C_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/b
 CMAKE_C_COMPILER_RANLIB:FILEPATH=CMAKE_C_COMPILER_RANLIB-NOTFOUND
 
 //CFLAGS
-CMAKE_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
@@ -248,13 +248,13 @@ CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/
 CMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 //ASM FLAGS
-TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //CXXFLAGS
-TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //CFLAGS
-TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //Flags used by compiler to generate dependency files
 TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP

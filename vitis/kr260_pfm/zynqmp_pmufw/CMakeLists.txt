@@ -14,6 +14,8 @@ collect(PROJECT_LIB_DEPS xilstandalone;xiltimer;xilfpga;xilsecure;xilskey)
 
 
 
+
+
 collect(PROJECT_LIB_DEPS xil)
 collect(PROJECT_LIB_DEPS xiltimer)
 collect(PROJECT_LIB_DEPS xilsecure)
@@ -47,7 +49,7 @@ string(APPEND CMAKE_CXX_LINK_FLAGS ${USER_LINK_OPTIONS})
 add_dependency_on_bsp(_sources)
 add_executable(${APP_NAME}.elf xpfw_start.S ${_sources})
 set_target_properties(${APP_NAME}.elf PROPERTIES LINK_DEPENDS ${USER_LINKER_SCRIPT})
-target_link_libraries(${APP_NAME}.elf -Wl,--no-relax -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects -Wl,--gc-sections -nostartfiles -T\"${USER_LINKER_SCRIPT}\" -L\"${CMAKE_LIBRARY_PATH}/\" -L\"${USER_LINK_DIRECTORIES}/\" -Wl,--start-group ${_deps} -Wl,--end-group)
+target_link_libraries(${APP_NAME}.elf -Wl,--no-relax -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto=1 -ffat-lto-objects -Wl,--gc-sections -nostartfiles -T\"${USER_LINKER_SCRIPT}\" -L\"${CMAKE_LIBRARY_PATH}/\" -L\"${USER_LINK_DIRECTORIES}/\" -Wl,--start-group ${_deps} -Wl,--end-group)
 target_compile_definitions(${APP_NAME}.elf PUBLIC ${USER_COMPILE_DEFINITIONS})
 target_include_directories(${APP_NAME}.elf PUBLIC ${USER_INCLUDE_DIRECTORIES})
 print_elf_size(CMAKE_SIZE ${APP_NAME})

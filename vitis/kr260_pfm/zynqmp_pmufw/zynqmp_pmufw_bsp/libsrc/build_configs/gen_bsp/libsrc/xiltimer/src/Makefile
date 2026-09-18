@@ -178,29 +178,29 @@ xiltimer/fast:
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build
 .PHONY : xiltimer/fast
 
-core/default_timer/microblaze_sleep.obj: core/default_timer/microblaze_sleep.c.obj
-.PHONY : core/default_timer/microblaze_sleep.obj
+core/ttcps/ttcps.obj: core/ttcps/ttcps.c.obj
+.PHONY : core/ttcps/ttcps.obj
 
 # target to build an object file
-core/default_timer/microblaze_sleep.c.obj:
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.obj
-.PHONY : core/default_timer/microblaze_sleep.c.obj
+core/ttcps/ttcps.c.obj:
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.obj
+.PHONY : core/ttcps/ttcps.c.obj
 
-core/default_timer/microblaze_sleep.i: core/default_timer/microblaze_sleep.c.i
-.PHONY : core/default_timer/microblaze_sleep.i
+core/ttcps/ttcps.i: core/ttcps/ttcps.c.i
+.PHONY : core/ttcps/ttcps.i
 
 # target to preprocess a source file
-core/default_timer/microblaze_sleep.c.i:
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.i
-.PHONY : core/default_timer/microblaze_sleep.c.i
+core/ttcps/ttcps.c.i:
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.i
+.PHONY : core/ttcps/ttcps.c.i
 
-core/default_timer/microblaze_sleep.s: core/default_timer/microblaze_sleep.c.s
-.PHONY : core/default_timer/microblaze_sleep.s
+core/ttcps/ttcps.s: core/ttcps/ttcps.c.s
+.PHONY : core/ttcps/ttcps.s
 
 # target to generate assembly for a file
-core/default_timer/microblaze_sleep.c.s:
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/microblaze_sleep.c.s
-.PHONY : core/default_timer/microblaze_sleep.c.s
+core/ttcps/ttcps.c.s:
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp && $(MAKE) $(MAKESILENT) -f libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/build.make libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/ttcps/ttcps.c.s
+.PHONY : core/ttcps/ttcps.c.s
 
 xiltimer.obj: xiltimer.c.obj
 .PHONY : xiltimer.obj
@@ -239,9 +239,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... xiltimer"
-	@echo "... core/default_timer/microblaze_sleep.obj"
-	@echo "... core/default_timer/microblaze_sleep.i"
-	@echo "... core/default_timer/microblaze_sleep.s"
+	@echo "... core/ttcps/ttcps.obj"
+	@echo "... core/ttcps/ttcps.i"
+	@echo "... core/ttcps/ttcps.s"
 	@echo "... xiltimer.obj"
 	@echo "... xiltimer.i"
 	@echo "... xiltimer.s"

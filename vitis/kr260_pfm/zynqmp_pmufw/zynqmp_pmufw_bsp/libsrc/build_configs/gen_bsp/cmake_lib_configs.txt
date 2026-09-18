@@ -50,13 +50,13 @@ SCUGIC_DIR:PATH=SCUGIC_DIR-NOTFOUND
 SUBDIR_LIST:STRING=ALL
 
 // ASM FLAGS
-TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 // CXXFLAGS
-TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 // CFLAGS
-TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 // Flags used by compiler to generate dependency files
 TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP
@@ -134,10 +134,10 @@ XILSKEY_use_puf_hd_as_user_efuse:BOOL=OFF
 XILTIMER_en_interval_timer:BOOL=OFF
 
 // This parameter is used to select specific timer for sleep functionality
-XILTIMER_sleep_timer:STRING=Default
+XILTIMER_sleep_timer:STRING=psu_ttc_3
 
 // This parameter is used to select specific timer for tick functionality
-XILTIMER_tick_timer:STRING=None
+XILTIMER_tick_timer:STRING=psu_ttc_2
 
 // Yocto based embeddedsw FLOW
 YOCTO:BOOL=OFF
@@ -152,7 +152,7 @@ proc_assembler:STRING=mb-gcc
 proc_compiler:STRING=mb-gcc
 
 // Compiler Flags
-proc_compiler_flags:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c
+proc_compiler_flags:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c
 
 // Extra Compiler Flags
 proc_extra_compiler_flags:STRING= -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns

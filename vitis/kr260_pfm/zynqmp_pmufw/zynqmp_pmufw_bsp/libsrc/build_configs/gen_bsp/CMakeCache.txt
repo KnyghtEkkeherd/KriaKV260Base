@@ -32,7 +32,7 @@ CMAKE_ASM_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin
 CMAKE_ASM_COMPILER_RANLIB:FILEPATH=CMAKE_ASM_COMPILER_RANLIB-NOTFOUND
 
 //ASMFLAGS
-CMAKE_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the ASM compiler during DEBUG builds.
 CMAKE_ASM_FLAGS_DEBUG:STRING=-g
@@ -62,7 +62,7 @@ CMAKE_CXX_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin
 CMAKE_CXX_COMPILER_RANLIB:FILEPATH=CMAKE_CXX_COMPILER_RANLIB-NOTFOUND
 
 //CXXFLAGS
-CMAKE_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -85,7 +85,7 @@ CMAKE_C_COMPILER_AR:FILEPATH=/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/b
 CMAKE_C_COMPILER_RANLIB:FILEPATH=CMAKE_C_COMPILER_RANLIB-NOTFOUND
 
 //CFLAGS
-CMAKE_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
+CMAKE_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
@@ -263,13 +263,13 @@ SCUGIC_DIR:PATH=SCUGIC_DIR-NOTFOUND
 SUBDIR_LIST:STRING=ALL
 
 //ASM FLAGS
-TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_ASM_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //CXXFLAGS
-TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_CXX_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //CFLAGS
-TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT
+TOOLCHAIN_C_FLAGS:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT
 
 //Flags used by compiler to generate dependency files
 TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP
@@ -352,40 +352,13 @@ XILSKEY_use_puf_hd_as_user_efuse:BOOL=OFF
 XILTIMER_en_interval_timer:BOOL=OFF
 
 //This parameter is used to select specific timer for sleep functionality
-XILTIMER_sleep_timer:STRING=psu_ttc_3
+XILTIMER_sleep_timer:STRING=Default
 
 //This parameter is used to select specific timer for tick functionality
-XILTIMER_tick_timer:STRING=psu_ttc_2
+XILTIMER_tick_timer:STRING=None
 
 //Yocto based embeddedsw FLOW
 YOCTO:BOOL=OFF
-
-//Value Computed by CMake
-avbuf_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/avbuf/src
-
-//Value Computed by CMake
-avbuf_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-avbuf_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/avbuf/src
-
-//Value Computed by CMake
-axidma_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/axidma/src
-
-//Value Computed by CMake
-axidma_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-axidma_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/axidma/src
-
-//Value Computed by CMake
-axipmon_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/axipmon/src
-
-//Value Computed by CMake
-axipmon_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-axipmon_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/axipmon/src
 
 //Value Computed by CMake
 bsp_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp
@@ -395,96 +368,6 @@ bsp_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 bsp_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp
-
-//Value Computed by CMake
-clockps_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/clockps/src
-
-//Value Computed by CMake
-clockps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-clockps_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/clockps/src
-
-//Value Computed by CMake
-common_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/common/src
-
-//Value Computed by CMake
-common_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-common_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/common/src
-
-//Value Computed by CMake
-csudma_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/csudma/src
-
-//Value Computed by CMake
-csudma_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-csudma_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/csudma/src
-
-//Value Computed by CMake
-ddrcpsu_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/ddrcpsu/src
-
-//Value Computed by CMake
-ddrcpsu_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-ddrcpsu_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/ddrcpsu/src
-
-//Value Computed by CMake
-dpdma_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/dpdma/src
-
-//Value Computed by CMake
-dpdma_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-dpdma_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/dpdma/src
-
-//Value Computed by CMake
-dppsu_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/dppsu/src
-
-//Value Computed by CMake
-dppsu_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-dppsu_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/dppsu/src
-
-//Value Computed by CMake
-gpiops_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/gpiops/src
-
-//Value Computed by CMake
-gpiops_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-gpiops_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/gpiops/src
-
-//Value Computed by CMake
-intc_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/intc/src
-
-//Value Computed by CMake
-intc_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-intc_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/intc/src
-
-//Value Computed by CMake
-ipipsu_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src
-
-//Value Computed by CMake
-ipipsu_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-ipipsu_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/ipipsu/src
-
-//Value Computed by CMake
-libxil_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc
-
-//Value Computed by CMake
-libxil_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-libxil_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc
 
 //Archiver
 proc_archiver:STRING=mb-gcc-ar
@@ -500,42 +383,6 @@ proc_compiler_flags:STRING= -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-
 
 //Extra Compiler Flags
 proc_extra_compiler_flags:STRING= -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns
-
-//Value Computed by CMake
-qspipsu_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/qspipsu/src
-
-//Value Computed by CMake
-qspipsu_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-qspipsu_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/qspipsu/src
-
-//Value Computed by CMake
-resetps_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/resetps/src
-
-//Value Computed by CMake
-resetps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-resetps_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/resetps/src
-
-//Value Computed by CMake
-rtcpsu_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/rtcpsu/src
-
-//Value Computed by CMake
-rtcpsu_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-rtcpsu_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/rtcpsu/src
-
-//Value Computed by CMake
-spips_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/spips/src
-
-//Value Computed by CMake
-spips_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-spips_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/spips/src
 
 //This option is not supported in the Unified Vitis IDE in this
 // version. Change to the classic IDE if you want to use this option.
@@ -573,51 +420,6 @@ standalone_xpm_support:STRING=None
 
 //Not needed any more in Unified Vitis
 standalone_zynqmp_fsbl_bsp:STRING=None
-
-//Value Computed by CMake
-sysmonpsu_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src
-
-//Value Computed by CMake
-sysmonpsu_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-sysmonpsu_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/sysmonpsu/src
-
-//Value Computed by CMake
-ttcps_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/ttcps/src
-
-//Value Computed by CMake
-ttcps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-ttcps_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/ttcps/src
-
-//Value Computed by CMake
-usbpsu_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/usbpsu/src
-
-//Value Computed by CMake
-usbpsu_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-usbpsu_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/usbpsu/src
-
-//Value Computed by CMake
-video_common_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/video_common/src
-
-//Value Computed by CMake
-video_common_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-video_common_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/video_common/src
-
-//Value Computed by CMake
-wdtps_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/wdtps/src
-
-//Value Computed by CMake
-wdtps_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-wdtps_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/wdtps/src
 
 //Value Computed by CMake
 xilfpga_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/xilfpga/src
@@ -663,15 +465,6 @@ xiltimer_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 xiltimer_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/xiltimer/src
-
-//Value Computed by CMake
-zdma_BINARY_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/zdma/src
-
-//Value Computed by CMake
-zdma_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-zdma_SOURCE_DIR:STATIC=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/zdma/src
 
 
 ########################
@@ -787,7 +580,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=40
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

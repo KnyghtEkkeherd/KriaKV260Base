@@ -7,11 +7,11 @@ ASM_DEFINES =
 
 ASM_INCLUDES = -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include -isystem /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include
 
-ASM_FLAGS =  -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns
+ASM_FLAGS =  -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns
 
 C_DEFINES = 
 
 C_INCLUDES = -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include -isystem /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include -isystem /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/x86_64-oesdk-linux/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/include -isystem /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/x86_64-oesdk-linux/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/include-fixed -isystem /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/microblazeeb-xilinx-elf/usr/include
 
-C_FLAGS =  -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns
+C_FLAGS =  -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT  -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns
 

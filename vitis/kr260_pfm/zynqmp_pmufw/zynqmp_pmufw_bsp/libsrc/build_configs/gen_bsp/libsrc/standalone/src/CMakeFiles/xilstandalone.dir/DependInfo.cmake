@@ -21,7 +21,6 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/clocking/xil_clocking.c" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj" "gcc" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj.d"
   "/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/inbyte.c" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj" "gcc" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj.d"
   "/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/intr/xinterrupt_wrap.c" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj" "gcc" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj.d"
   "/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/outbyte.c" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj" "gcc" "libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj.d"

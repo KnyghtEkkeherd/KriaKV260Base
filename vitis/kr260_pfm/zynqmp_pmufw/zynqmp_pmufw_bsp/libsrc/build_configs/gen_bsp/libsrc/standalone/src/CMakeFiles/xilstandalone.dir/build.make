@@ -74,7 +74,7 @@ include libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 
 libsrc/standalone/src/microblaze_interrupt_handler.o: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_interrupt_handler.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating microblaze_interrupt_handler.o"
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-g++ -O2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -DPSU_PMU=1U -mcpu=v9.2 -DSDT -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_interrupt_handler.c -I /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include -o /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/microblaze_interrupt_handler.o
+	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-g++ -O2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT -MMD -MP -specs=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/Xilinx.spec -I/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/include -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_interrupt_handler.c -I /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/include -o /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/microblaze_interrupt_handler.o
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/print.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/print.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/print.c
@@ -230,24 +230,10 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xilstandalone.dir/common/inbyte.c.s"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/inbyte.c -o CMakeFiles/xilstandalone.dir/common/inbyte.c.s
 
-libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
-libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/clocking/xil_clocking.c
-libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj"
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj -MF CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj.d -o CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/clocking/xil_clocking.c
-
-libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.i"
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/clocking/xil_clocking.c > CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.i
-
-libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.s"
-	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/clocking/xil_clocking.c -o CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.s
-
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/intr/xinterrupt_wrap.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj -MF CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj.d -o CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/common/intr/xinterrupt_wrap.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.i: cmake_force
@@ -261,7 +247,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/xmicroblaze_g.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj -MF CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj.d -o CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/xmicroblaze_g.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.i: cmake_force
@@ -275,7 +261,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.s: cmake_forc
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/errno.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/errno.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.i: cmake_force
@@ -289,7 +275,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.s: cmake_f
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/_exit.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/_exit.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/_exit.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.i: cmake_force
@@ -303,7 +289,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/_exit.c.s: cmake_f
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/fcntl.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/fcntl.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.i: cmake_force
@@ -317,7 +303,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/fcntl.c.s: cmake_f
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_exception_handler.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_exception_handler.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_exception_handler.c.i: cmake_force
@@ -331,7 +317,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_excepti
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_interrupts_g.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_interrupts_g.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interrupts_g.c.i: cmake_force
@@ -345,7 +331,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_interru
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/pvr.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/pvr.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/pvr.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.i: cmake_force
@@ -359,7 +345,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/pvr.c.s: cmake_for
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xio.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/xio.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xio.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.i: cmake_force
@@ -373,7 +359,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xio.c.s: cmake_for
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xil_exception.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xil_exception.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.i: cmake_force
@@ -387,7 +373,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_exception.c.s:
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xil_misc_psreset_api.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xil_misc_psreset_api.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_api.c.i: cmake_force
@@ -400,7 +386,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_misc_psreset_a
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/hw_exception_handler.S.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/hw_exception_handler.S.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/hw_exception_handler.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/hw_exception_handler.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/hw_exception_handler.S.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/xilstandalone.dir/microblaze/hw_exception_handler.S.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/hw_exception_handler.S
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/hw_exception_handler.S.i: cmake_force
@@ -414,7 +400,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/hw_exception_handl
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xil_cache.c
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj -MF CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj.d -o CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/xil_cache.c
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.i: cmake_force
@@ -427,7 +413,7 @@ libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/xil_cache.c.s: cma
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_scrub.S.obj: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/flags.make
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_scrub.S.obj: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_scrub.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_scrub.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_scrub.S.obj"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && /home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/xilstandalone.dir/microblaze/microblaze_scrub.S.obj -c /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/standalone/src/microblaze/microblaze_scrub.S
 
 libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/microblaze_scrub.S.i: cmake_force
@@ -451,7 +437,6 @@ xilstandalone_OBJECTS = \
 "CMakeFiles/xilstandalone.dir/common/xplatform_info.c.obj" \
 "CMakeFiles/xilstandalone.dir/common/outbyte.c.obj" \
 "CMakeFiles/xilstandalone.dir/common/inbyte.c.obj" \
-"CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj" \
 "CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj" \
 "CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj" \
 "CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj" \
@@ -482,7 +467,6 @@ libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilst
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xplatform_info.c.obj
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj
-libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/clocking/xil_clocking.c.obj
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xmicroblaze_g.c.obj
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/microblaze/errno.c.obj
@@ -500,7 +484,7 @@ libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilst
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/microblaze_interrupt_handler.o
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/build.make
 libsrc/standalone/src/libxilstandalone.a: libsrc/standalone/src/CMakeFiles/xilstandalone.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking C static library libxilstandalone.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking C static library libxilstandalone.a"
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && $(CMAKE_COMMAND) -P CMakeFiles/xilstandalone.dir/cmake_clean_target.cmake
 	cd /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xilstandalone.dir/link.txt --verbose=$(VERBOSE)
 

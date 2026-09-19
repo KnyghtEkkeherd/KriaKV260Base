@@ -1,7 +1,7 @@
 sdt: hw_artifacts/psu_cortexa53_0_baremetal.dts
 family: ZynqMP
 path: /home/user/workspace/vitis/kr260_pfm/zynqmp_fsbl/zynqmp_fsbl_bsp
-config: None
+config: default
 os: standalone
 os_info:
   standalone:
@@ -175,6 +175,10 @@ lib_folder: lib
 libsrc_folder: libsrc
 drv_info:
   axi_dma_0:
+    driver: axidma
+    ip_name: axi_dma
+    path: /home/user/Xilinx/Vitis/2024.1/data/embeddedsw/XilinxProcessorIPLib/drivers/axidma_v9_18
+  axi_dma_1:
     driver: axidma
     ip_name: axi_dma
     path: /home/user/Xilinx/Vitis/2024.1/data/embeddedsw/XilinxProcessorIPLib/drivers/axidma_v9_18

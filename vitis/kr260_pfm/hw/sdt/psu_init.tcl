@@ -388,7 +388,6 @@ set psu_pll_init_data {
 		# PLL Basic Control
 		#(OFFSET, MASK, VALUE)      (0XFD1A002C, 0x00000008U ,0x00000008U)  */
     mask_write 0XFD1A002C 0x00000008 0x00000008
-		# : DPLL FRAC CFG
 		# : ASSERT RESET
 		# Register : DPLL_CTRL @ 0XFD1A002C</p>
 
@@ -436,6 +435,7 @@ set psu_pll_init_data {
     # PD as a clock source for the peripheral clock muxes.
 		#(OFFSET, MASK, VALUE)      (0XFD1A004C, 0x00003F00U ,0x00000200U)  */
     mask_write 0XFD1A004C 0x00003F00 0x00000200
+		# : DPLL FRAC CFG
 		# : VIDEO_PLL INIT
 		# Register : VPLL_CFG @ 0XFD1A003C</p>
 
@@ -10800,36 +10800,6 @@ set psu_mio_init_data {
 		# Configures MIO Pin 34 peripheral interface mapping
 		#(OFFSET, MASK, VALUE)      (0XFF180088, 0x000000FEU ,0x00000000U)  */
     mask_write 0XFF180088 0x000000FE 0x00000000
-		# Register : MIO_PIN_35 @ 0XFF18008C</p>
-
-		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem0, Input, gem0_rgmii_rxd[
-    # 2]- (RX RGMII data)
-		# PSU_IOU_SLCR_MIO_PIN_35_L0_SEL                                                  0
-
-		# Level 1 Mux Select 0= Level 2 Mux Output 1= pcie, Input, pcie_reset_n- (
-    # PCIE Reset signal)
-		# PSU_IOU_SLCR_MIO_PIN_35_L1_SEL                                                  0
-
-		# Level 2 Mux Select 0= Level 3 Mux Output 1= pmu, Output, pmu_gpo[3]- (PM
-    # U GPI) 2= test_scan, Input, test_scan_in[35]- (Test Scan Port) = test_sc
-    # an, Output, test_scan_out[35]- (Test Scan Port) 3= dpaux, Input, dp_hot_
-    # plug_detect- (Dp Aux Hot Plug)
-		# PSU_IOU_SLCR_MIO_PIN_35_L2_SEL                                                  1
-
-		# Level 3 Mux Select 0= gpio1, Input, gpio_1_pin_in[9]- (GPIO bank 1) 0= g
-    # pio1, Output, gpio_1_pin_out[9]- (GPIO bank 1) 1= can0, Output, can0_phy
-    # _tx- (Can TX signal) 2= i2c0, Input, i2c0_sda_input- (SDA signal) 2= i2c
-    # 0, Output, i2c0_sda_out- (SDA signal) 3= swdt0, Output, swdt0_rst_out- (
-    # Watch Dog Timer Output clock) 4= spi1, Input, spi1_n_ss_in- (SPI Master
-    # Selects) 4= spi1, Output, spi1_n_ss_out[0]- (SPI Master Selects) 5= ttc2
-    # , Output, ttc2_wave_out- (TTC Waveform Clock) 6= ua0, Output, ua0_txd- (
-    # UART transmitter serial output) 7= trace, Output, tracedq[13]- (Trace Po
-    # rt Databus)
-		# PSU_IOU_SLCR_MIO_PIN_35_L3_SEL                                                  0
-
-		# Configures MIO Pin 35 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF18008C, 0x000000FEU ,0x00000008U)  */
-    mask_write 0XFF18008C 0x000000FE 0x00000008
 		# Register : MIO_PIN_36 @ 0XFF180090</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem0, Input, gem0_rgmii_rxd[
@@ -15285,16 +15255,22 @@ set psu_afi_config {
 		#(OFFSET, MASK, VALUE)      (0XFF5E023C, 0x00080000U ,0x00000000U)  */
     mask_write 0XFF5E023C 0x00080000 0x00000000
 		# : AFIFM INTERFACE WIDTH
-		# Register : afi_fs @ 0XFF419000</p>
+		# Register : afi_fs @ 0XFD615000</p>
 
 		# Select the 32/64/128-bit data width selection for the Slave 0 00: 32-bit
     #  AXI data width (default) 01: 64-bit AXI data width 10: 128-bit AXI data
     #  width 11: reserved
-		# PSU_LPD_SLCR_AFI_FS_DW_SS2_SEL                                                  0x0
+		# PSU_FPD_SLCR_AFI_FS_DW_SS0_SEL                                                  0x2
 
-		# afi fs SLCR control register. Do not change the bits durin
-		#(OFFSET, MASK, VALUE)      (0XFF419000, 0x00000300U ,0x00000000U)  */
-    mask_write 0XFF419000 0x00000300 0x00000000
+		# Select the 32/64/128-bit data width selection for the Slave 1 00: 32-bit
+    #  AXI data width (default) 01: 64-bit AXI data width 10: 128-bit AXI data
+    #  width 11: reserved
+		# PSU_FPD_SLCR_AFI_FS_DW_SS1_SEL                                                  0x2
+
+		# afi fs SLCR control register. This register is static and should not be
+    # modified during operation.
+		#(OFFSET, MASK, VALUE)      (0XFD615000, 0x00000F00U ,0x00000A00U)  */
+    mask_write 0XFD615000 0x00000F00 0x00000A00
 		# Register : AFIFM_RDCTRL @ 0XFD360000</p>
 
 		# Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b

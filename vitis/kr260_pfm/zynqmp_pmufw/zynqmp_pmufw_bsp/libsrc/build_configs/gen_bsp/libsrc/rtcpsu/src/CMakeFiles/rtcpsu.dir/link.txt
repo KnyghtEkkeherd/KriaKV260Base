@@ -1,2 +1,0 @@
-mb-ar qc librtcpsu.a CMakeFiles/rtcpsu.dir/xrtcpsu_sinit.c.obj CMakeFiles/rtcpsu.dir/xrtcpsu_g.c.obj CMakeFiles/rtcpsu.dir/xrtcpsu_selftest.c.obj CMakeFiles/rtcpsu.dir/xrtcpsu.c.obj CMakeFiles/rtcpsu.dir/xrtcpsu_intr.c.obj
-/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-ranlib librtcpsu.a

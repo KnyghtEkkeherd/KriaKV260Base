@@ -1,2 +1,0 @@
-mb-ar qc libspips.a CMakeFiles/spips.dir/xspips.c.obj CMakeFiles/spips.dir/xspips_g.c.obj CMakeFiles/spips.dir/xspips_hw.c.obj CMakeFiles/spips.dir/xspips_options.c.obj CMakeFiles/spips.dir/xspips_selftest.c.obj CMakeFiles/spips.dir/xspips_sinit.c.obj
-/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-ranlib libspips.a

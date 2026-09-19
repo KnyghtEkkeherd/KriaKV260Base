@@ -1,7 +1,7 @@
 sdt: hw_artifacts/psu_pmu_0_baremetal.dts
 family: ZynqMP
 path: /home/user/workspace/vitis/kr260_pfm/zynqmp_pmufw/zynqmp_pmufw_bsp
-config: None
+config: default
 os: standalone
 os_info:
   standalone:
@@ -151,7 +151,7 @@ proc_config:
         -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c'
       default: ' -O2  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-reorder
         -mxl-soft-mul -mxl-soft-div -O2 -pipe -g -feliminate-unused-debug-types -Os
-        -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c'
+        -flto=1 -ffat-lto-objects -DPSU_PMU=1U -mcpu=v9.2 -DSDT;-c'
       options: []
       description: Compiler Flags
     proc_extra_compiler_flags:
@@ -169,6 +169,10 @@ lib_folder: lib
 libsrc_folder: libsrc
 drv_info:
   axi_dma_0:
+    driver: axidma
+    ip_name: axi_dma
+    path: /home/user/Xilinx/Vitis/2024.1/data/embeddedsw/XilinxProcessorIPLib/drivers/axidma_v9_18
+  axi_dma_1:
     driver: axidma
     ip_name: axi_dma
     path: /home/user/Xilinx/Vitis/2024.1/data/embeddedsw/XilinxProcessorIPLib/drivers/axidma_v9_18
@@ -456,7 +460,7 @@ lib_config:
       permission: read_write
       type: string
       value: psu_ttc_3
-      default: psu_ttc_3
+      default: Default
       options:
       - Default
       - psu_ttc_3
@@ -469,7 +473,7 @@ lib_config:
       permission: read_write
       type: string
       value: psu_ttc_2
-      default: psu_ttc_2
+      default: None
       options:
       - None
       - psu_ttc_3

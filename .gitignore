@@ -1,0 +1,7 @@
+.DS_Store
+.directory
+
+vitis/logs/
+vivado/logs/
+vitis/.DS_Store
+vivado/.DS_Store

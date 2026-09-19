@@ -25,7 +25,7 @@
 /* #undef VERSALNET_PLM */
 /* #undef PLATFORM_MB */
 #define XPAR_CPU_ID 0
-#define XIL_INTERRUPT  
+/* #undef XIL_INTERRUPT */
 /* #undef XPAR_STDIN_IS_UARTLITE */
 /* #undef XPAR_STDIN_IS_UARTNS550 */
 /* #undef XPAR_STDIN_IS_UARTPS */

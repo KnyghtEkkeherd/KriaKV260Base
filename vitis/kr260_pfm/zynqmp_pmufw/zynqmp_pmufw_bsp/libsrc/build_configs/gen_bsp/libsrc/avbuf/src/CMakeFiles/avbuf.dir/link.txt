@@ -1,2 +1,0 @@
-mb-ar qc libavbuf.a CMakeFiles/avbuf.dir/xavbuf.c.obj CMakeFiles/avbuf.dir/xavbuf_clk.c.obj CMakeFiles/avbuf.dir/xavbuf_videoformats.c.obj
-/home/user/Xilinx/Vitis/2024.1/gnu/microblaze/lin/bin/mb-ranlib libavbuf.a

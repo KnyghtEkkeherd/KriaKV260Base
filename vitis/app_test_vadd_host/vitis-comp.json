@@ -1,0 +1,36 @@
+{
+  "name": "app_test_vadd_host",
+  "type": "HOST",
+  "platform": "/home/user/workspace/vitis/kr260_pfm/export/kr260_pfm/kr260_pfm.xpfm",
+  "domain": "linux_psu_cortexa53",
+  "cpuInstance": "cortex-a53",
+  "cpuType": "cortex-a53",
+  "os": "linux",
+  "sysroot": "/home/user/local-extract/xilinx-zynqmp-common-v2024.1/sysroots/cortexa72-cortexa53-xilinx-linux",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": [
+      {
+        "configId": "default",
+        "compilerSymbols": [],
+        "compilerIncludes": [
+          "../app_test_vadd_common"
+        ],
+        "compilerOptions": [],
+        "linkerLibraries": [],
+        "linkerLibraryPaths": [],
+        "linkerOptions": [],
+        "x86CompilerSymbols": [],
+        "x86CompilerIncludes": [
+          "../app_test_vadd_common"
+        ],
+        "x86CompilerOptions": [],
+        "x86LinkerLibraries": [],
+        "x86LinkerLibraryPaths": [],
+        "x86LinkerOptions": []
+      }
+    ]
+  },
+  "domainRealName": "linux_psu_cortexa53",
+  "applicationFlow": "EMBEDDED_ACCEL"
+}

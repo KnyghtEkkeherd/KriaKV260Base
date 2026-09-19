@@ -1,8 +1,0 @@
-set_property SRC_FILE_INFO {cfile:/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_ooc.xdc rfile:../../../../../kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0/kria_bd_axi_intc_0_0_ooc.xdc id:1 order:EARLY scoped_inst:U0} [current_design]
-set_property SRC_FILE_INFO {cfile:/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_axi_intc_0_0_synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:2} [current_design]
-set_property src_info {type:SCOPED_XDC file:1 line:9 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
-create_clock -period 5.000 -name s_axi_aclk [get_ports s_axi_aclk]
-set_property src_info {type:SCOPED_XDC file:1 line:10 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
-set_property HD.CLK_SRC BUFGCTRL_X0Y0 [get_ports s_axi_aclk]
-set_property src_info {type:XDC file:2 line:9 export:INPUT save:INPUT read:READ} [current_design]
-set_property KEEP_HIERARCHY SOFT [get_cells U0]

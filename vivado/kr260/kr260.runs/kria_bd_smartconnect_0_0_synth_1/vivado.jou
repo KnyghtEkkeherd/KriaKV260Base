@@ -1,24 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2026.1 (64-bit)
-# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
-# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
-# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Fri Sep 11 23:59:43 2026
-# Process ID         : 32202
-# Current directory  : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1
-# Command line       : vivado -log kria_bd_smartconnect_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kria_bd_smartconnect_0_0.tcl
-# Log file           : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.vds
-# Journal file       : /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/vivado.jou
-# Running On         : cachyos-x8664
-# Platform           : cachyos
-# Operating System   : CachyOS
-# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
-# CPU Frequency      : 4183.545 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 16
-# Host memory        : 16703 MB
-# Swap memory        : 16702 MB
-# Total Virtual      : 33406 MB
-# Available Virtual  : 23695 MB
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Sep 19 15:19:37 2026
+# Process ID: 802
+# Current directory: /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1
+# Command line: vivado -log kria_bd_smartconnect_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kria_bd_smartconnect_0_0.tcl
+# Log file: /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.vds
+# Journal file: /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/vivado.jou
+# Running On        :e67e4f1e895b
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :VirtualApple @ 2.50GHz
+# CPU Frequency     :2502.057 MHz
+# CPU Physical cores:8
+# CPU Logical cores :8
+# Host memory       :12529 MB
+# Swap memory       :4294 MB
+# Total Virtual     :16824 MB
+# Available Virtual :15707 MB
 #-----------------------------------------------------------
 source kria_bd_smartconnect_0_0.tcl -notrace

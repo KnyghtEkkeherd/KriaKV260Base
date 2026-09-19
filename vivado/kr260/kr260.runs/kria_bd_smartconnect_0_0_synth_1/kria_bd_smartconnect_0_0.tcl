@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.tcl"
+  variable script "/home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "kria_bd_smartconnect_0_0_synth_1" START { ROLLUP_AUTO }
-set_param bd.open.in_stealth_mode 2
-set_param general.usePosixSpawnForFork 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -67,20 +65,83 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.cache/wt [current_project]
-set_property parent.project_path /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.xpr [current_project]
+set_property webtalk.parent_dir /home/user/workspace/vivado/kr260/kr260.cache/wt [current_project]
+set_property parent.project_path /home/user/workspace/vivado/kr260/kr260.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part xilinx.com:kr260_som:part0:2.0 [current_project]
-set_property ip_output_repo /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.cache/ip [current_project]
+set_property board_part xilinx.com:kr260_som:part0:1.1 [current_project]
+set_property ip_output_repo /home/user/workspace/vivado/kr260/kr260.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.srcs/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0.xci
-set_property used_in_implementation false [get_files -all /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_0/bd_2d9b_sc_ul_0_cdc.xdc]
-set_property used_in_implementation false [get_files -all /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/smartconnect.xdc]
+read_ip -quiet /home/user/workspace/vivado/kr260/kr260.srcs/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0.xci
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_1/bd_2d9b_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_1/bd_2d9b_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_2/bd_2d9b_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_3/bd_2d9b_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_4/bd_2d9b_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_5/bd_2d9b_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_6/bd_2d9b_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_10/bd_2d9b_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_11/bd_2d9b_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_11/bd_2d9b_sarn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_12/bd_2d9b_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_12/bd_2d9b_srn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_16/bd_2d9b_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_17/bd_2d9b_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_17/bd_2d9b_sawn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_18/bd_2d9b_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_18/bd_2d9b_swn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_19/bd_2d9b_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_19/bd_2d9b_sbn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_23/bd_2d9b_s02a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_24/bd_2d9b_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_24/bd_2d9b_sarn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_25/bd_2d9b_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_25/bd_2d9b_srn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_26/bd_2d9b_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_26/bd_2d9b_sawn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_27/bd_2d9b_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_27/bd_2d9b_swn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_28/bd_2d9b_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_28/bd_2d9b_sbn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_32/bd_2d9b_s03a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_33/bd_2d9b_sarn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_33/bd_2d9b_sarn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_34/bd_2d9b_srn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_34/bd_2d9b_srn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_38/bd_2d9b_s04a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_39/bd_2d9b_sawn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_39/bd_2d9b_sawn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_40/bd_2d9b_swn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_40/bd_2d9b_swn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_41/bd_2d9b_sbn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_41/bd_2d9b_sbn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_45/bd_2d9b_s05a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_46/bd_2d9b_sarn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_46/bd_2d9b_sarn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_47/bd_2d9b_srn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_47/bd_2d9b_srn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_48/bd_2d9b_sawn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_48/bd_2d9b_sawn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_49/bd_2d9b_swn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_49/bd_2d9b_swn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_50/bd_2d9b_sbn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_50/bd_2d9b_sbn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_51/bd_2d9b_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_52/bd_2d9b_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_52/bd_2d9b_m00arn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_53/bd_2d9b_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_53/bd_2d9b_m00rn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_54/bd_2d9b_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_54/bd_2d9b_m00awn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_55/bd_2d9b_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_55/bd_2d9b_m00wn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_56/bd_2d9b_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/bd_0/ip/ip_56/bd_2d9b_m00bn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/smartconnect.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -96,7 +157,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1 -new_name kria_bd_smartconnect_0_0 -ip [get_ips kria_bd_smartconnect_0_0]]
+set cacheID [config_ip_cache -export -no_bom  -dir /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1 -new_name kria_bd_smartconnect_0_0 -ip [get_ips kria_bd_smartconnect_0_0]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -151,32 +212,32 @@ generate_parallel_reports -reports { "report_utilization -file kria_bd_smartconn
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.dcp /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0.dcp
+  file copy -force /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.dcp /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.v
+  write_verilog -force -mode synth_stub /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.v
-} _RESULT ] } { 
-  puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
-}
-
-if { [catch {
-  write_vhdl -force -mode synth_stub /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.vhdl
+  write_verilog -force -mode funcsim /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.v
+} _RESULT ] } { 
+  puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
+}
+
+if { [catch {
+  write_vhdl -force -mode funcsim /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -186,32 +247,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.dcp /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0.dcp
+  file copy -force /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0.dcp /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_stub.v /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.v
+  file rename -force /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_stub.v /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_stub.vhdl /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.vhdl
+  file rename -force /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_stub.vhdl /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_sim_netlist.v /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.v
+  file rename -force /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_sim_netlist.v /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_sim_netlist.vhdl /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.vhdl
+  file rename -force /home/user/workspace/vivado/kr260/kr260.runs/kria_bd_smartconnect_0_0_synth_1/kria_bd_smartconnect_0_0_sim_netlist.vhdl /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -219,15 +280,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0]} {
+if {[file isdir /home/user/workspace/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0]} {
   catch { 
-    file copy -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.v /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0
+    file copy -force /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.v /home/user/workspace/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0
   }
 }
 
-if {[file isdir /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0]} {
+if {[file isdir /home/user/workspace/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0]} {
   catch { 
-    file copy -force /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.vhdl /home/wiktork/Code/atmos_ws/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0
+    file copy -force /home/user/workspace/vivado/kr260/kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_smartconnect_0_0/kria_bd_smartconnect_0_0_stub.vhdl /home/user/workspace/vivado/kr260/kr260.ip_user_files/ip/kria_bd_smartconnect_0_0
   }
 }
 file delete __synthesis_is_running__

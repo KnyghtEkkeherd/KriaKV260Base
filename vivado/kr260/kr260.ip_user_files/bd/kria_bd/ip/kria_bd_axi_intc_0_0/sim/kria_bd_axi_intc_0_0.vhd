@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_intc:4.1
--- IP Revision: 23
+-- IP Revision: 19
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_intc_v4_1_23;
-USE axi_intc_v4_1_23.axi_intc;
+LIBRARY axi_intc_v4_1_19;
+USE axi_intc_v4_1_19.axi_intc;
 
 ENTITY kria_bd_axi_intc_0_0 IS
   PORT (
@@ -77,7 +77,7 @@ ENTITY kria_bd_axi_intc_0_0 IS
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
-    intr : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    intr : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     irq : OUT STD_LOGIC
   );
 END kria_bd_axi_intc_0_0;
@@ -134,7 +134,7 @@ ARCHITECTURE kria_bd_axi_intc_0_0_arch OF kria_bd_axi_intc_0_0 IS
       s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_rvalid : OUT STD_LOGIC;
       s_axi_rready : IN STD_LOGIC;
-      intr : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      intr : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       processor_clk : IN STD_LOGIC;
       processor_rst : IN STD_LOGIC;
       irq : OUT STD_LOGIC;
@@ -146,27 +146,21 @@ ARCHITECTURE kria_bd_axi_intc_0_0_arch OF kria_bd_axi_intc_0_0 IS
     );
   END COMPONENT axi_intc;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_MODE : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF intr: SIGNAL IS "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH:LEVEL_HIGH, PortWidth 2";
   ATTRIBUTE X_INTERFACE_INFO OF intr: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt_input INTERRUPT";
-  ATTRIBUTE X_INTERFACE_MODE OF intr: SIGNAL IS "slave interrupt_input";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF intr: SIGNAL IS "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH, PortWidth 1";
-  ATTRIBUTE X_INTERFACE_INFO OF irq: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt_irq INTERRUPT";
-  ATTRIBUTE X_INTERFACE_MODE OF irq: SIGNAL IS "master interrupt_irq";
   ATTRIBUTE X_INTERFACE_PARAMETER OF irq: SIGNAL IS "XIL_INTERFACENAME interrupt_irq, SENSITIVITY LEVEL_HIGH, PortWidth 1";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 s_axi_aclk CLK";
-  ATTRIBUTE X_INTERFACE_MODE OF s_axi_aclk: SIGNAL IS "slave s_axi_aclk";
+  ATTRIBUTE X_INTERFACE_INFO OF irq: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt_irq INTERRUPT";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 199998000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN kria_bd_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 s_axi_aclk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi ARADDR";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 s_resetn RST";
-  ATTRIBUTE X_INTERFACE_MODE OF s_axi_aresetn: SIGNAL IS "slave s_resetn";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME s_resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 s_resetn RST";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi ARREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_arvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi ARVALID";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi AWADDR";
-  ATTRIBUTE X_INTERFACE_MODE OF s_axi_awaddr: SIGNAL IS "slave s_axi";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 199998000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN kria_bd_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_T" & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 199998000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN kria_bd_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_T" & 
 "HREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi AWADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awready: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi AWREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi AWVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_bready: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi BREADY";
@@ -187,12 +181,12 @@ BEGIN
       C_INSTANCE => "kria_bd_axi_intc_0_0",
       C_S_AXI_ADDR_WIDTH => 9,
       C_S_AXI_DATA_WIDTH => 32,
-      C_NUM_INTR_INPUTS => 1,
+      C_NUM_INTR_INPUTS => 2,
       C_NUM_SW_INTR => 0,
-      C_KIND_OF_INTR => X"fffffffe",
-      C_KIND_OF_EDGE => X"ffffffff",
-      C_KIND_OF_LVL => X"ffffffff",
-      C_ASYNC_INTR => X"FFFFFFFE",
+      C_KIND_OF_INTR => X"fffffffc",
+      C_KIND_OF_EDGE => X"FFFFFFFF",
+      C_KIND_OF_LVL => X"FFFFFFFF",
+      C_ASYNC_INTR => X"FFFFFFFC",
       C_NUM_SYNC_FF => 2,
       C_ADDR_WIDTH => 32,
       C_IVAR_RESET_VALUE => X"0000000000000010",
@@ -204,7 +198,7 @@ BEGIN
       C_HAS_ILR => 0,
       C_IRQ_IS_LEVEL => 1,
       C_IRQ_ACTIVE => '1',
-      C_DISABLE_SYNCHRONIZERS => 1,
+      C_DISABLE_SYNCHRONIZERS => 0,
       C_MB_CLK_NOT_CONNECTED => 1,
       C_HAS_FAST => 0,
       C_EN_CASCADE_MODE => 0,

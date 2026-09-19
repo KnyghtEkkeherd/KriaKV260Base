@@ -1,0 +1,12 @@
+{
+  "name": "app_test_vadd_krnl_vadd",
+  "type": "HLS",
+  "part": "xck26-sfvc784-2LV-c",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "krnl_vadd"
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "directory": "/home/user/workspace/vitis/app_test_vadd_krnl_vadd",
+    "arguments": [
+      "/home/user/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/user/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot",
+      "",
+      "-g -I/home/user/workspace/vitis/app_test_vadd_common",
+      "-c",
+      "/home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd.cpp"
+    ],
+    "file": "/home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd.cpp"
+  }
+]

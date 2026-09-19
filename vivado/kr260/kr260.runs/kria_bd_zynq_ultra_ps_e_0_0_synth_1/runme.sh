@@ -1,16 +1,16 @@
-#!/bin/bash
+#!/bin/sh
 
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/run/media/wiktork/Data/Vitis/2026.1/Vitis/bin:/run/media/wiktork/Data/Vitis/2026.1/Vivado/ids_lite/ISE/bin/lin64:/run/media/wiktork/Data/Vitis/2026.1/Vivado/bin
+  PATH=/home/user/Xilinx/Vitis/2024.1/bin:/home/user/Xilinx/Vivado/2024.1/bin
 else
-  PATH=/run/media/wiktork/Data/Vitis/2026.1/Vitis/bin:/run/media/wiktork/Data/Vitis/2026.1/Vivado/ids_lite/ISE/bin/lin64:/run/media/wiktork/Data/Vitis/2026.1/Vivado/bin:$PATH
+  PATH=/home/user/Xilinx/Vitis/2024.1/bin:/home/user/Xilinx/Vivado/2024.1/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/wiktork/Code/atmos_ws/vivado/kr260/kr260.runs/kria_bd_zynq_ultra_ps_e_0_0_synth_1'
+HD_PWD='/home/user/workspace/vivado/kr260/kr260.runs/kria_bd_zynq_ultra_ps_e_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,74 @@
+{
+  "modelVersion": "1.0",
+  "projectName": "app_test_vadd",
+  "platform": "/home/user/workspace/vitis/kr260_pfm/export/kr260_pfm/kr260_pfm.xpfm",
+  "externalComponentRefs": [
+    "app_test_vadd_krnl_vadd",
+    "app_test_vadd_host"
+  ],
+  "components": [
+    {
+      "name": "package",
+      "type": "PACKAGE",
+      "configuration": {
+        "componentType": "PACKAGE",
+        "packageConfigurations": [
+          {
+            "configId": "package.default",
+            "options": []
+          }
+        ],
+        "configFiles": [
+          "package/package.cfg"
+        ]
+      }
+    },
+    {
+      "name": "hw_link",
+      "type": "HW_LINKER",
+      "configuration": {
+        "componentType": "HW_LINKER",
+        "containers": [
+          {
+            "name": "binary_container_1",
+            "kernels": {
+              "krnl_vadd": "app_test_vadd_krnl_vadd"
+            },
+            "userXoKernels": {},
+            "aieComponents": [],
+            "userAieLibadfList": [],
+            "cfgFiles": [
+              "hw_link/binary_container_1-link.cfg"
+            ]
+          }
+        ],
+        "vppLinkerConfigurations": [
+          {
+            "configId": "hw_link.default",
+            "options": [],
+            "containerOptions": {},
+            "buildDatafiles": []
+          }
+        ]
+      }
+    }
+  ],
+  "buildConfigurations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "supportedTargets": [
+        "SW_EMU",
+        "HW"
+      ],
+      "componentConfigMap": {
+        "package": "package.default",
+        "hw_link": "hw_link.default"
+      }
+    }
+  ],
+  "activeBuildConfigId": "default",
+  "hostMode": "x86",
+  "isDirty": true,
+  "applicationFlow": "EMBEDDED_ACCEL"
+}

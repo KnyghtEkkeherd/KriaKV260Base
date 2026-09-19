@@ -4,7 +4,7 @@
     "xci_name": "kria_bd_axi_intc_0_0",
     "cell_name": "axi_intc_0",
     "component_reference": "xilinx.com:ip:axi_intc:4.1",
-    "ip_revision": "23",
+    "ip_revision": "19",
     "gen_directory": "../../../../../../kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0",
     "parameters": {
       "component_parameters": {
@@ -14,15 +14,15 @@
         "C_HAS_IVR": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_HAS_ILR": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_IRQ_ACTIVE": [ { "value": "0x1", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
-        "C_KIND_OF_INTR": [ { "value": "0xFFFFFFFE", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
-        "C_NUM_INTR_INPUTS": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_NUM_SW_INTR": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_KIND_OF_INTR": [ { "value": "0xFFFFFFFC", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_NUM_INTR_INPUTS": [ { "value": "2", "value_src": "propagated", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_NUM_SW_INTR": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_KIND_OF_LVL": [ { "value": "0xFFFFFFFF", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
-        "C_ASYNC_INTR": [ { "value": "0xFFFFFFFE", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_ASYNC_INTR": [ { "value": "0xFFFFFFFC", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_NUM_SYNC_FF": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_IRQ_IS_LEVEL": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_KIND_OF_EDGE": [ { "value": "0xFFFFFFFF", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
-        "C_HAS_FAST": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_HAS_FAST": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_ADDR_WIDTH": [ { "value": "32", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_IVAR_RESET_VALUE": [ { "value": "0x0000000000000010", "value_permission": "bd", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
         "C_ENABLE_ASYNC": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -31,10 +31,10 @@
         "Sense_of_IRQ_Edge_Type": [ { "value": "Rising", "resolve_type": "user", "usage": "all" } ],
         "C_EN_CASCADE_MODE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_CASCADE_MASTER": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_MB_CLK_NOT_CONNECTED": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_DISABLE_SYNCHRONIZERS": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_S_AXI_ACLK_FREQ_MHZ": [ { "value": "200.0", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
-        "C_PROCESSOR_CLK_FREQ_MHZ": [ { "value": "200.0", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
+        "C_MB_CLK_NOT_CONNECTED": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_DISABLE_SYNCHRONIZERS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_S_AXI_ACLK_FREQ_MHZ": [ { "value": "199.998", "value_src": "propagated", "resolve_type": "user", "format": "float", "usage": "all" } ],
+        "C_PROCESSOR_CLK_FREQ_MHZ": [ { "value": "100.0", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "C_IRQ_CONNECTION": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ]
       },
       "model_parameters": {
@@ -42,12 +42,12 @@
         "C_INSTANCE": [ { "value": "kria_bd_axi_intc_0_0", "resolve_type": "generated", "usage": "all" } ],
         "C_S_AXI_ADDR_WIDTH": [ { "value": "9", "resolve_type": "dependent", "format": "long", "usage": "all" } ],
         "C_S_AXI_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ],
-        "C_NUM_INTR_INPUTS": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_NUM_INTR_INPUTS": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_NUM_SW_INTR": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_KIND_OF_INTR": [ { "value": "0xfffffffe", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
-        "C_KIND_OF_EDGE": [ { "value": "0xffffffff", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
-        "C_KIND_OF_LVL": [ { "value": "0xffffffff", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
-        "C_ASYNC_INTR": [ { "value": "0xFFFFFFFE", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_KIND_OF_INTR": [ { "value": "0xfffffffc", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_KIND_OF_EDGE": [ { "value": "0xFFFFFFFF", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_KIND_OF_LVL": [ { "value": "0xFFFFFFFF", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_ASYNC_INTR": [ { "value": "0xFFFFFFFC", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_NUM_SYNC_FF": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_IVAR_RESET_VALUE": [ { "value": "0x0000000000000010", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
@@ -59,33 +59,34 @@
         "C_HAS_ILR": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_IRQ_IS_LEVEL": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_IRQ_ACTIVE": [ { "value": "0x1", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
-        "C_DISABLE_SYNCHRONIZERS": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_DISABLE_SYNCHRONIZERS": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_MB_CLK_NOT_CONNECTED": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_FAST": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_EN_CASCADE_MODE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_CASCADE_MASTER": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "zynquplus", "resolve_type": "generated", "usage": "all" } ],
-        "BASE_BOARD_PART": [ { "value": "xilinx.com:kr260_som:part0:2.0", "resolve_type": "generated", "usage": "all" } ],
-        "BOARD_CONNECTIONS": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
-        "DEVICE": [ { "value": "xck26", "resolve_type": "generated", "usage": "all" } ],
-        "PACKAGE": [ { "value": "sfvc784", "resolve_type": "generated", "usage": "all" } ],
-        "PREFHDL": [ { "value": "VERILOG", "resolve_type": "generated", "usage": "all" } ],
-        "SILICON_REVISION": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
-        "SIMULATOR_LANGUAGE": [ { "value": "MIXED", "resolve_type": "generated", "usage": "all" } ],
-        "SPEEDGRADE": [ { "value": "-2LV", "resolve_type": "generated", "usage": "all" } ],
-        "STATIC_POWER": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
-        "TEMPERATURE_GRADE": [ { "value": "C", "resolve_type": "generated", "usage": "all" } ]
+        "ARCHITECTURE": [ { "value": "zynquplus" } ],
+        "BASE_BOARD_PART": [ { "value": "xilinx.com:kr260_som:part0:1.1" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xck26" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
+        "PACKAGE": [ { "value": "sfvc784" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2LV" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "C" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "23" } ],
+        "IPREVISION": [ { "value": "19" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../kr260.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_intc_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2026.1" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -110,7 +111,7 @@
         "s_axi_rresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "s_axi_rvalid": [ { "direction": "out" } ],
         "s_axi_rready": [ { "direction": "in" } ],
-        "intr": [ { "direction": "in", "size_left": "0", "size_right": "0" } ],
+        "intr": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "irq": [ { "direction": "out" } ]
       },
       "interfaces": {
@@ -140,16 +141,16 @@
             "HAS_WSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_READ_OUTSTANDING": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_WRITE_OUTSTANDING": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "8", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "8", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
             "CLK_DOMAIN": [ { "value": "kria_bd_clk_wiz_0_0_clk_out1", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_READ_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_WRITE_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
@@ -219,8 +220,8 @@
           "abstraction_type": "xilinx.com:signal:interrupt_rtl:1.0",
           "mode": "slave",
           "parameters": {
-            "SENSITIVITY": [ { "value": "LEVEL_HIGH", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "usage": "all" } ],
-            "PortWidth": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
+            "SENSITIVITY": [ { "value": "LEVEL_HIGH:LEVEL_HIGH", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "usage": "all" } ],
+            "PortWidth": [ { "value": "2", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "INTERRUPT": [ { "physical_name": "intr" } ]
@@ -242,7 +243,7 @@
               "registers": {
                 "ISR": {
                   "address_offset": "0x0",
-                  "size": 1,
+                  "size": 2,
                   "display_name": "Interrupt Status Register",
                   "description": "Interrupt Status Register",
                   "is_volatile": true,
@@ -251,7 +252,7 @@
                   "fields": {
                     "INT": {
                       "bit_offset": 0,
-                      "bit_width": 1,
+                      "bit_width": 2,
                       "display_name": "Active Interrupt Signal",
                       "description": "Interrupt Status Register.\nFor each bit up to number of periperhal interrupts:\n  R - Reads active interrupt signal.\n  W - No effect after MER HIE bit has been set, otherwise writes active interrupt signal.\nFor remaining bits defined by number of software interrupts:\n  R - Reads software interrupt value.\n  W - Writes software interrupt value.\n",
                       "is_volatile": true,
@@ -261,7 +262,7 @@
                 },
                 "IPR": {
                   "address_offset": "0x4",
-                  "size": 1,
+                  "size": 2,
                   "display_name": "Interrupt Pending Register",
                   "description": "Interrupt Pending Register",
                   "is_volatile": true,
@@ -270,7 +271,7 @@
                   "fields": {
                     "INT": {
                       "bit_offset": 0,
-                      "bit_width": 1,
+                      "bit_width": 2,
                       "display_name": "Pending Interrupt Signal",
                       "description": "Interrupt Pending Register.\nFor each bit:\n  R - Reads logical AND of bits in ISR and IER.\n  W - No effect.\n",
                       "is_volatile": true,
@@ -280,7 +281,7 @@
                 },
                 "IER": {
                   "address_offset": "0x8",
-                  "size": 1,
+                  "size": 2,
                   "display_name": "Interrupt Enable Register",
                   "description": "Interrupt Enable Register",
                   "is_volatile": true,
@@ -289,7 +290,7 @@
                   "fields": {
                     "INT": {
                       "bit_offset": 0,
-                      "bit_width": 1,
+                      "bit_width": 2,
                       "display_name": "Interrupt Enable",
                       "description": "Interrupt Enable Register.\nFor each bit:\n  R - Reads interrupt enable value.\n  W - Writes interrupt enable value.\n",
                       "is_volatile": true,
@@ -299,7 +300,7 @@
                 },
                 "IAR": {
                   "address_offset": "0xC",
-                  "size": 1,
+                  "size": 2,
                   "display_name": "Interrupt Acknowledge Register",
                   "description": "Interrupt Acknowledge Register",
                   "is_volatile": true,
@@ -308,7 +309,7 @@
                   "fields": {
                     "INT": {
                       "bit_offset": 0,
-                      "bit_width": 1,
+                      "bit_width": 2,
                       "display_name": "Interrupt Acknowledge",
                       "description": "Interrupt Acknowledge Register.\nFor each bit:\n  W - Acknowledge interrupt.\n",
                       "is_volatile": true,
@@ -318,7 +319,7 @@
                 },
                 "SIE": {
                   "address_offset": "0x10",
-                  "size": 1,
+                  "size": 2,
                   "display_name": "Set Interrupt Enables",
                   "description": "Set Interrupt Enables",
                   "is_volatile": true,
@@ -327,7 +328,7 @@
                   "fields": {
                     "INT": {
                       "bit_offset": 0,
-                      "bit_width": 1,
+                      "bit_width": 2,
                       "display_name": "Set Interrupt Enable",
                       "description": "Set Interrupt Enables\nFor each bit:\n  R - Reads active interrupt.\n  W - Writing 1 enables the interrupt, writing 0 has no effect.\n",
                       "is_volatile": true,
@@ -337,7 +338,7 @@
                 },
                 "CIE": {
                   "address_offset": "0x14",
-                  "size": 1,
+                  "size": 2,
                   "display_name": "Clear Interrupt Enables",
                   "description": "Clear Interrupt Enables",
                   "is_volatile": true,
@@ -346,7 +347,7 @@
                   "fields": {
                     "INT": {
                       "bit_offset": 0,
-                      "bit_width": 1,
+                      "bit_width": 2,
                       "display_name": "Clear Interrupt Enable",
                       "description": "Clear Interrupt Enables\nFor each bit:\n  R - Reads active interrupt.\n  W - Writing 1 disables the interrupt, writing 0 has no effect.\n",
                       "is_volatile": true,
@@ -406,6 +407,5 @@
         }
       }
     }
-  },
-  "checksum": "7b05ae92"
+  }
 }

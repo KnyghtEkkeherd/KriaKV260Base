@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Sep 18 18:52:50 2026
+# Process ID: 31654
+# Current directory: /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/vivado.log
+# Journal file: /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/vivado.jou
+# Running On        :9af58ac72c48
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :VirtualApple @ 2.50GHz
+# CPU Frequency     :2502.057 MHz
+# CPU Physical cores:8
+# CPU Logical cores :8
+# Host memory       :8218 MB
+# Swap memory       :4294 MB
+# Total Virtual     :12513 MB
+# Available Virtual :6186 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/hls_data.json outdir=/home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip srcdir=/home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/misc
+INFO: Copied 21 verilog file(s) to /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/hdl/verilog
+INFO: Copied 18 vhdl file(s) to /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/drivers
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+ipx::create_core: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1906.062 ; gain = 115.215 ; free physical = 201 ; free virtual = 5869
+INFO: Import ports from HDL: /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/hdl/vhdl/krnl_vadd.vhd (krnl_vadd)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add data interface event_done
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/user/Xilinx/Vivado/2024.1/data/ip'.
+INFO: Add interrupt interface interrupt
+INFO: Add data interface event_start
+INFO: Add axi4full interface m_axi_gmem0
+INFO: Add axi4full interface m_axi_gmem1
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/component.xml
+Generating XO file: krnl_vadd.xo in directory /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/..
+Running: package_xo -xo_path /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/../krnl_vadd.xo -kernel_xml /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/kernel.xml -kernel_name krnl_vadd -ip_directory /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip -kernel_files /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/../../krnl_vadd.cpp -hls_directory /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/misc/hls_files -kernel_json /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/hls_data.json
+INFO: Created IP archive /home/user/workspace/vitis/app_test_vadd_krnl_vadd/krnl_vadd/hls/impl/ip/xilinx_com_hls_krnl_vadd_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 18 18:53:33 2026...

@@ -334,7 +334,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_READ_OUTSTANDING">2</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_READ_OUTSTANDING">8</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -343,7 +343,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_WRITE_OUTSTANDING">2</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_WRITE_OUTSTANDING">8</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -2504,6 +2504,15 @@
             </xilinx:parameterInfo>
           </spirit:vendorExtensions>
         </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_MM2S.HAS_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
       </spirit:parameters>
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
@@ -2874,6 +2883,15 @@
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_CNTRL.HAS_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
             </xilinx:parameterInfo>
           </spirit:vendorExtensions>
         </spirit:parameter>
@@ -3737,9 +3755,7 @@
             <spirit:name>Reset</spirit:name>
             <spirit:displayName>Soft Reset</spirit:displayName>
             <spirit:description>Soft reset for resetting the AXI DMA core. Setting this bit to a 1 causes the AXI DMA to be reset. Reset is accomplished gracefully. Pending commands/transfers are flushed or completed.
-AXI4-Stream outs are potentially terminated early. Setting either MM2S_DMACR. Reset = 1 or S2MM_DMACR.Reset = 1 resets the entire AXI DMA engine. After completion of a soft reset, all registers and bits are in the Reset State.   
-  0 - Normal operation.
-  1 - Reset in progress.
+AXI4-Stream outs are potentially terminated early. Setting either MM2S_DMACR. Reset = 1 or S2MM_DMACR.Reset = 1 resets the entire AXI DMA engine. After completion of a soft reset, all registers and bits are in the Reset State.      0 - Normal operation.   1 - Reset in progress.
 </spirit:description>
             <spirit:bitOffset>2</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3787,9 +3803,7 @@ This bit is non functional when DMA operates in multichannel mode.
           <spirit:field>
             <spirit:name>IOC_IrqEn</spirit:name>
             <spirit:displayName>Interrupt on Complete (IOC) Interrupt Enable</spirit:displayName>
-            <spirit:description>Interrupt on Complete (IOC) Interrupt Enable. When set to 1, allows DMASR.IOC_Irq to generate an interrupt out for descriptors with the IOC bit set.
-  0 - IOC Interrupt disabled   
-  1 - IOC Interrupt enabled
+            <spirit:description>Interrupt on Complete (IOC) Interrupt Enable. When set to 1, allows DMASR.IOC_Irq to generate an interrupt out for descriptors with the IOC bit set.   0 - IOC Interrupt disabled      1 - IOC Interrupt enabled
 </spirit:description>
             <spirit:bitOffset>12</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3804,9 +3818,7 @@ This bit is non functional when DMA operates in multichannel mode.
           <spirit:field>
             <spirit:name>Dly_IrqEn</spirit:name>
             <spirit:displayName>Interrupt on Delay Timer Interrupt Enable</spirit:displayName>
-            <spirit:description>Interrupt on Delay Timer Interrupt Enable. When set to 1, allows DMASR.Dly_Irq to generate an interrupt out.   
-  0 - Delay Interrupt disabled
-  1 - Delay Interrupt enabled Note: This field is ignored when AXI DMA is configured for Direct Register Mode.
+            <spirit:description>Interrupt on Delay Timer Interrupt Enable. When set to 1, allows DMASR.Dly_Irq to generate an interrupt out.      0 - Delay Interrupt disabled   1 - Delay Interrupt enabled Note: This field is ignored when AXI DMA is configured for Direct Register Mode.
 </spirit:description>
             <spirit:bitOffset>13</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3838,9 +3850,7 @@ This bit is non functional when DMA operates in multichannel mode.
           <spirit:field>
             <spirit:name>IRQThreshold</spirit:name>
             <spirit:displayName>Interrupt Threshold</spirit:displayName>
-            <spirit:description>Interrupt Threshold. This value is used for setting the interrupt threshold. When IOC interrupt events occur, an internal counter counts down from the Interrupt Threshold setting. When the count reaches zero, an interrupt out is generated by the DMA engine.
-  Note: The minimum setting for the threshold is 0x01. A write of 0x00 to this register has no effect.
-  Note: This field is ignored when AXI DMA is configured for Direct Register Mode.
+            <spirit:description>Interrupt Threshold. This value is used for setting the interrupt threshold. When IOC interrupt events occur, an internal counter counts down from the Interrupt Threshold setting. When the count reaches zero, an interrupt out is generated by the DMA engine.   Note: The minimum setting for the threshold is 0x01. A write of 0x00 to this register has no effect.   Note: This field is ignored when AXI DMA is configured for Direct Register Mode.
 </spirit:description>
             <spirit:bitOffset>16</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
@@ -3884,10 +3894,7 @@ Note: This field is ignored when AXI DMA is configured for Direct Register Mode.
           <spirit:field>
             <spirit:name>Halted</spirit:name>
             <spirit:displayName>DMA Channel Halted</spirit:displayName>
-            <spirit:description>DMA Channel Halted. Indicates the run/stop state of the DMA channel.   
-  0 - DMA channel running.   
-  1 - DMA channel halted. 
-For Scatter / Gather Mode this bit gets set when DMACR.RS = 0 and DMA and SG operations have halted. For Direct Register mode (C_INCLUDE_SG = 0) this bit gets set when DMACR.RS = 0 and DMA operations have halted. There can be a lag of time between when DMACR.RS = 0 and when DMASR.Halted = 1 Note: When halted (RS= 0 and Halted = 1), writing to CURDESC_PTR or TAILDESC_PTR pointer registers has no effect on DMA operations when in Scatter Gather Mode. For Direct Register Mode, writing to the LENGTH register has no effect on DMA operations.
+            <spirit:description>DMA Channel Halted. Indicates the run/stop state of the DMA channel.      0 - DMA channel running.      1 - DMA channel halted.  For Scatter / Gather Mode this bit gets set when DMACR.RS = 0 and DMA and SG operations have halted. For Direct Register mode (C_INCLUDE_SG = 0) this bit gets set when DMACR.RS = 0 and DMA operations have halted. There can be a lag of time between when DMACR.RS = 0 and when DMASR.Halted = 1 Note: When halted (RS= 0 and Halted = 1), writing to CURDESC_PTR or TAILDESC_PTR pointer registers has no effect on DMA operations when in Scatter Gather Mode. For Direct Register Mode, writing to the LENGTH register has no effect on DMA operations.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3904,10 +3911,7 @@ For Scatter / Gather Mode this bit gets set when DMACR.RS = 0 and DMA and SG ope
             <spirit:displayName>DMA Channel Idle</spirit:displayName>
             <spirit:description>DMA Channel Idle. Indicates the state of AXI DMA operations.
 For Scatter / Gather Mode when IDLE indicates the SG Engine has reached the tail pointer for the associated channel and all queued descriptors have been processed. Writing to the tail pointer register automatically restarts DMA operations.
-For Direct Register Mode when IDLE indicates the current transfer has completed.   
-  0 - Not Idle. For Scatter / Gather Mode, SG has not reached tail descriptor pointer and/or DMA operations in progress. For Direct Register Mode, transfer is not complete.   
-  1 - Idle. For Scatter / Gather Mode, SG has reached tail descriptor pointer and DMA operation paused. for Direct Register Mode, DMA transfer has completed and controller is paused. 
-Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 prior to initial transfer when AXI DMA configured for Direct Register Mode.
+For Direct Register Mode when IDLE indicates the current transfer has completed.      0 - Not Idle. For Scatter / Gather Mode, SG has not reached tail descriptor pointer and/or DMA operations in progress. For Direct Register Mode, transfer is not complete.      1 - Idle. For Scatter / Gather Mode, SG has reached tail descriptor pointer and DMA operation paused. for Direct Register Mode, DMA transfer has completed and controller is paused.  Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 prior to initial transfer when AXI DMA configured for Direct Register Mode.
 </spirit:description>
             <spirit:bitOffset>1</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3938,9 +3942,7 @@ Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 
           <spirit:field>
             <spirit:name>DMAIntErr</spirit:name>
             <spirit:displayName>DMA Internal Error</spirit:displayName>
-            <spirit:description>DMA Internal Error. Internal error occurs if the buffer length specified in the fetched descriptor is set to 0. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No DMA Internal Errors     
-  1 - DMA Internal Error detected. DMA Engine halts
+            <spirit:description>DMA Internal Error. Internal error occurs if the buffer length specified in the fetched descriptor is set to 0. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No DMA Internal Errors        1 - DMA Internal Error detected. DMA Engine halts
 </spirit:description>
             <spirit:bitOffset>4</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3955,9 +3957,7 @@ Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 
           <spirit:field>
             <spirit:name>DMASlvErr</spirit:name>
             <spirit:displayName>DMA Slave Error</spirit:displayName>
-            <spirit:description>DMA Slave Error. This error occurs if the slave read from the Memory Map interface issues a Slave Error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No DMA Slave Errors.   
-  1 - DMA Slave Error detected. DMA Engine halts
+            <spirit:description>DMA Slave Error. This error occurs if the slave read from the Memory Map interface issues a Slave Error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No DMA Slave Errors.      1 - DMA Slave Error detected. DMA Engine halts
 </spirit:description>
             <spirit:bitOffset>5</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3972,9 +3972,7 @@ Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 
           <spirit:field>
             <spirit:name>DMADecErr</spirit:name>
             <spirit:displayName>DMA Decode Error</spirit:displayName>
-            <spirit:description>DMA Decode Error. This error occurs if the address request points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No DMA Decode Errors.   
-  1 - DMA Decode Error detected. DMA Engine halts.
+            <spirit:description>DMA Decode Error. This error occurs if the address request points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No DMA Decode Errors.      1 - DMA Decode Error detected. DMA Engine halts.
 </spirit:description>
             <spirit:bitOffset>6</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -3989,10 +3987,7 @@ Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 
           <spirit:field>
             <spirit:name>SGIntErr</spirit:name>
             <spirit:displayName>Scatter Gather Internal Error</spirit:displayName>
-            <spirit:description>Scatter Gather Internal Error. This error occurs if a descriptor with the &quot;Complete bit&quot; already set is fetched. Refer to the Scatter Gather Descriptor section for more information.This indicates to the SG Engine that the descriptor is a stale descriptor. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No SG Internal Errors.   
-  1 - SG Internal Error detected. DMA Engine halts. 
-Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode.
+            <spirit:description>Scatter Gather Internal Error. This error occurs if a descriptor with the &quot;Complete bit&quot; already set is fetched. Refer to the Scatter Gather Descriptor section for more information.This indicates to the SG Engine that the descriptor is a stale descriptor. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No SG Internal Errors.      1 - SG Internal Error detected. DMA Engine halts.  Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode.
 </spirit:description>
             <spirit:bitOffset>8</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4007,10 +4002,7 @@ Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Dire
           <spirit:field>
             <spirit:name>SGSlvErr</spirit:name>
             <spirit:displayName>Scatter Gather Slave Error</spirit:displayName>
-            <spirit:description>Scatter Gather Slave Error. This error occurs if the slave read from on the Memory Map interface issues a Slave error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No SG Slave Errors.   
-  1 - SG Slave Error detected. DMA Engine halts. 
-Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode. 
+            <spirit:description>Scatter Gather Slave Error. This error occurs if the slave read from on the Memory Map interface issues a Slave error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No SG Slave Errors.      1 - SG Slave Error detected. DMA Engine halts.  Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode. 
 </spirit:description>
             <spirit:bitOffset>9</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4025,10 +4017,7 @@ Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Dire
           <spirit:field>
             <spirit:name>SGDecErr</spirit:name>
             <spirit:displayName>Scatter Gather Decode Error</spirit:displayName>
-            <spirit:description>Scatter Gather Decode Error. This error occurs if CURDESC_PTR and/or NXTDESC_PTR points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No SG Decode Errors.   
-  1 - SG Decode Error detected. DMA Engine halts. 
-Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode. 
+            <spirit:description>Scatter Gather Decode Error. This error occurs if CURDESC_PTR and/or NXTDESC_PTR points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No SG Decode Errors.      1 - SG Decode Error detected. DMA Engine halts.  Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode. 
 </spirit:description>
             <spirit:bitOffset>10</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4043,10 +4032,7 @@ Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Dire
           <spirit:field>
             <spirit:name>IOC_Irq</spirit:name>
             <spirit:displayName>Interrupt on Complete</spirit:displayName>
-            <spirit:description>Interrupt on Complete. When set to 1 for Scatter/Gather Mode, indicates an interrupt event was generated on completion of a descriptor. This occurs for descriptors with the End of Frame (EOF) bit set. When set to 1 for Direct Register Mode, indicates an interrupt event was generated on completion of a transfer. If the corresponding bit is enabled in the MM2S_DMACR (IOC_IrqEn = 1) and if the interrupt threshold has been met, causes an interrupt out to be generated from the AXI DMA.   
-  0 - No IOC Interrupt.   
-  1 - IOC Interrupt detected. 
-Writing a 1 to this bit will clear it.
+            <spirit:description>Interrupt on Complete. When set to 1 for Scatter/Gather Mode, indicates an interrupt event was generated on completion of a descriptor. This occurs for descriptors with the End of Frame (EOF) bit set. When set to 1 for Direct Register Mode, indicates an interrupt event was generated on completion of a transfer. If the corresponding bit is enabled in the MM2S_DMACR (IOC_IrqEn = 1) and if the interrupt threshold has been met, causes an interrupt out to be generated from the AXI DMA.      0 - No IOC Interrupt.      1 - IOC Interrupt detected.  Writing a 1 to this bit will clear it.
 </spirit:description>
             <spirit:bitOffset>12</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4062,10 +4048,7 @@ Writing a 1 to this bit will clear it.
           <spirit:field>
             <spirit:name>Dly_Irq</spirit:name>
             <spirit:displayName>Interrupt on Delay</spirit:displayName>
-            <spirit:description>Interrupt on Delay. When set to 1, indicates an interrupt event was generated on delay timer time out. If the corresponding bit is enabled in the MM2S_DMACR (Dly_IrqEn = 1), an interrupt out is generated from the AXI DMA.   
-  0 - No Delay Interrupt.   
-  1 - Delay Interrupt detected.
-Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode. 
+            <spirit:description>Interrupt on Delay. When set to 1, indicates an interrupt event was generated on delay timer time out. If the corresponding bit is enabled in the MM2S_DMACR (Dly_IrqEn = 1), an interrupt out is generated from the AXI DMA.      0 - No Delay Interrupt.      1 - Delay Interrupt detected. Note: This bit is not used and is fixed at 0 when AXI DMA is configured for Direct Register Mode. 
 </spirit:description>
             <spirit:bitOffset>13</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4466,9 +4449,7 @@ Note: If Data Realignment Engine is included, the Source Address can be at any b
             <spirit:name>Reset</spirit:name>
             <spirit:displayName>Soft Reset</spirit:displayName>
             <spirit:description>Soft reset for resetting the AXI DMA core. Setting this bit to a 1 causes the AXI DMA to be reset. Reset is accomplished gracefully. Pending commands/transfers are flushed or completed.
-AXI4-Stream outs are terminated early, if necessary with associated TLAST. Setting either MM2S_DMACR.Reset = 1 or S2MM_DMACR.Reset = 1 resets the entire AXI DMA engine. After completion of a soft reset, all registers and bits are in the Reset State.   
-  0 - Reset not in progress. Normal operation.   
-  1 - Reset in progress
+AXI4-Stream outs are terminated early, if necessary with associated TLAST. Setting either MM2S_DMACR.Reset = 1 or S2MM_DMACR.Reset = 1 resets the entire AXI DMA engine. After completion of a soft reset, all registers and bits are in the Reset State.      0 - Reset not in progress. Normal operation.      1 - Reset in progress
 </spirit:description>
             <spirit:bitOffset>2</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4515,9 +4496,7 @@ This bit is non functional when DMA operates in Multichannel mode. or in Direct 
           <spirit:field>
             <spirit:name>IOC_IrqEn</spirit:name>
             <spirit:displayName>Interrupt on Complete (IOC) Interrupt Enable</spirit:displayName>
-            <spirit:description>Interrupt on Complete (IOC) Interrupt Enable. When set to 1, allows Interrupt On Complete events to generate an interrupt out for descriptors with the Complete bit set.   
-  0 - IOC Interrupt disabled   
-  1 - IOC Interrupt enabled
+            <spirit:description>Interrupt on Complete (IOC) Interrupt Enable. When set to 1, allows Interrupt On Complete events to generate an interrupt out for descriptors with the Complete bit set.      0 - IOC Interrupt disabled      1 - IOC Interrupt enabled
 </spirit:description>
             <spirit:bitOffset>12</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4532,10 +4511,7 @@ This bit is non functional when DMA operates in Multichannel mode. or in Direct 
           <spirit:field>
             <spirit:name>Dly_IrqEn</spirit:name>
             <spirit:displayName>Interrupt on Delay Timer Interrupt Enable</spirit:displayName>
-            <spirit:description>Interrupt on Delay Timer Interrupt Enable. When set to 1, allows error events to generate an interrupt out.   
-  0 - Delay Interrupt disabled   
-  1 - Delay Interrupt enabled 
-Note: Applicable only when Scatter Gather is enabled.
+            <spirit:description>Interrupt on Delay Timer Interrupt Enable. When set to 1, allows error events to generate an interrupt out.      0 - Delay Interrupt disabled      1 - Delay Interrupt enabled  Note: Applicable only when Scatter Gather is enabled.
 </spirit:description>
             <spirit:bitOffset>13</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4550,9 +4526,7 @@ Note: Applicable only when Scatter Gather is enabled.
           <spirit:field>
             <spirit:name>Err_IrqEn</spirit:name>
             <spirit:displayName>Interrupt on Error Interrupt Enable</spirit:displayName>
-            <spirit:description>Interrupt on Error Interrupt Enable. When set to 1, allows error events to generate an interrupt out.   
-  0 - Error Interrupt disabled   
-  1 - Error Interrupt enabled
+            <spirit:description>Interrupt on Error Interrupt Enable. When set to 1, allows error events to generate an interrupt out.      0 - Error Interrupt disabled      1 - Error Interrupt enabled
 </spirit:description>
             <spirit:bitOffset>14</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4613,10 +4587,7 @@ Note: Applicable only when Scatter Gather is enabled.
           <spirit:field>
             <spirit:name>Halted</spirit:name>
             <spirit:displayName>DMA Channel Halted</spirit:displayName>
-            <spirit:description>DMA Channel Halted. Indicates the run/stop state of the DMA channel.   
-  0 - DMA channel running.   
-  1 - DMA channel halted. 
-For Scatter/Gather Mode this bit gets set when DMACR.RS = 0 and DMA and SG operations have halted. For Direct Register Mode this bit gets set when DMACR.RS = 0 and DMA operations have halted. There can be a lag of time between when DMACR.RS = 0 and when DMASR.Halted = 1 
+            <spirit:description>DMA Channel Halted. Indicates the run/stop state of the DMA channel.      0 - DMA channel running.      1 - DMA channel halted.  For Scatter/Gather Mode this bit gets set when DMACR.RS = 0 and DMA and SG operations have halted. For Direct Register Mode this bit gets set when DMACR.RS = 0 and DMA operations have halted. There can be a lag of time between when DMACR.RS = 0 and when DMASR.Halted = 1 
 Note: When halted (RS= 0 and Halted = 1), writing to CURDESC_PTR or TAILDESC_PTR pointer registers has no effect on DMA operations when in Scatter Gather Mode. For Direct Register Mode, writing to the LENGTH register has no effect on DMA operations.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
@@ -4634,10 +4605,7 @@ Note: When halted (RS= 0 and Halted = 1), writing to CURDESC_PTR or TAILDESC_PTR
             <spirit:displayName>DMA Channel Idle</spirit:displayName>
             <spirit:description>DMA Channel Idle. Indicates the state of AXI DMA operations.
 For Scatter / Gather Mode when IDLE indicates the SG Engine has reached the tail pointer for the associated channel and all queued descriptors have been processed. Writing to the tail pointer register automatically restarts DMA operations.
-For Direct Register Mode when IDLE indicates the current transfer has completed.   
-  0 - Not Idle.   
-  1 - Idle.  
-Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 prior to initial transfer when AXI DMA configured for Direct Register Mode.
+For Direct Register Mode when IDLE indicates the current transfer has completed.      0 - Not Idle.      1 - Idle.   Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 prior to initial transfer when AXI DMA configured for Direct Register Mode.
 </spirit:description>
             <spirit:bitOffset>1</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4668,9 +4636,7 @@ Note: This bit is 0 when channel is halted (DMASR.Halted=1). This bit is also 0 
             <spirit:name>DMAIntErr</spirit:name>
             <spirit:displayName>DMA Internal Error</spirit:displayName>
             <spirit:description>DMA Internal Error. This error occurs if the buffer length specified in the fetched descriptor is set to 0. Also, when in Scatter Gather Mode and using the status app length field, this error occurs when the Status AXI4-Stream packet RxLength field does not match the S2MM packet being received by the S_AXIS_S2MM interface. When Scatter Gather is disabled, this error is flagged if any error occurs during Memory write or if the incoming packet is bigger than what is specified in the DMA length register.
-This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No DMA Internal Errors   
-  1 - DMA Internal Error detected.
+This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No DMA Internal Errors      1 - DMA Internal Error detected.
 </spirit:description>
             <spirit:bitOffset>4</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4685,9 +4651,7 @@ This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is 
           <spirit:field>
             <spirit:name>DMASlvErr</spirit:name>
             <spirit:displayName>DMA Slave Error</spirit:displayName>
-            <spirit:description>DMA Slave Error. This error occurs if the slave read from the Memory Map interface issues a Slave Error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No DMA Slave Errors.   
-  1 - DMA Slave Error detected.
+            <spirit:description>DMA Slave Error. This error occurs if the slave read from the Memory Map interface issues a Slave Error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No DMA Slave Errors.      1 - DMA Slave Error detected.
 </spirit:description>
             <spirit:bitOffset>5</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4702,9 +4666,7 @@ This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is 
           <spirit:field>
             <spirit:name>DMADecErr</spirit:name>
             <spirit:displayName>DMA Decode Error</spirit:displayName>
-            <spirit:description>DMA Decode Error. This error occurs if the address request points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.  
-  0 - No DMA Decode Errors.
-  1 - DMA Decode Error detected.
+            <spirit:description>DMA Decode Error. This error occurs if the address request points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.     0 - No DMA Decode Errors.   1 - DMA Decode Error detected.
 </spirit:description>
             <spirit:bitOffset>6</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4719,10 +4681,7 @@ This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is 
           <spirit:field>
             <spirit:name>SGIntErr</spirit:name>
             <spirit:displayName>Scatter Gather Internal Error</spirit:displayName>
-            <spirit:description>Scatter Gather Internal Error. This error occurs if a descriptor with the &quot;Complete bit&quot; already set is fetched. This indicates to the SG Engine that the descriptor is a tail descriptor. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No SG Internal Errors.   
-  1 - SG Internal Error detected. 
-Note: Applicable only when Scatter Gather is enabled. 
+            <spirit:description>Scatter Gather Internal Error. This error occurs if a descriptor with the &quot;Complete bit&quot; already set is fetched. This indicates to the SG Engine that the descriptor is a tail descriptor. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No SG Internal Errors.      1 - SG Internal Error detected.  Note: Applicable only when Scatter Gather is enabled. 
 </spirit:description>
             <spirit:bitOffset>8</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4737,9 +4696,7 @@ Note: Applicable only when Scatter Gather is enabled.
           <spirit:field>
             <spirit:name>SGSlvErr</spirit:name>
             <spirit:displayName>Scatter Gather Slave Error</spirit:displayName>
-            <spirit:description>Scatter Gather Slave Error. This error occurs if the slave read from on the Memory Map interface issues a Slave error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No SG Slave Errors.   
-  1 - SG Slave Error detected. DMA Engine halts. Note: Applicable only when Scatter Gather is enabled. 
+            <spirit:description>Scatter Gather Slave Error. This error occurs if the slave read from on the Memory Map interface issues a Slave error. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No SG Slave Errors.      1 - SG Slave Error detected. DMA Engine halts. Note: Applicable only when Scatter Gather is enabled. 
 </spirit:description>
             <spirit:bitOffset>9</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4754,9 +4711,7 @@ Note: Applicable only when Scatter Gather is enabled.
           <spirit:field>
             <spirit:name>SGDecErr</spirit:name>
             <spirit:displayName>Scatter Gather Decode Error</spirit:displayName>
-            <spirit:description>Scatter Gather Decode Error. This error occurs if CURDESC_PTR and/or NXTDESC_PTR points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.   
-  0 - No SG Decode Errors.   
-  1 - SG Decode Error detected. DMA Engine halts. Note: Applicable only when Scatter Gather is enabled. 
+            <spirit:description>Scatter Gather Decode Error. This error occurs if CURDESC_PTR and/or NXTDESC_PTR points to an invalid address. This error condition causes the AXI DMA to halt gracefully. The DMACR.RS bit is set to 0, and when the engine has completely shut down, the DMASR.Halted bit is set to 1.      0 - No SG Decode Errors.      1 - SG Decode Error detected. DMA Engine halts. Note: Applicable only when Scatter Gather is enabled. 
 </spirit:description>
             <spirit:bitOffset>10</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4771,9 +4726,7 @@ Note: Applicable only when Scatter Gather is enabled.
           <spirit:field>
             <spirit:name>IOC_Irq</spirit:name>
             <spirit:displayName>Interrupt on Complete</spirit:displayName>
-            <spirit:description>Interrupt on Complete. When set to 1 for Scatter/Gather Mode, indicates an interrupt event was generated on completion of a descriptor. This occurs for descriptors with the End of Frame (EOF) bit set. When set to 1 for Direct Register Mode, indicates an interrupt event was generated on completion of a transfer. If the corresponding bit in S2MM_DMACR is enabled (IOC_IrqEn = 1) and if the interrupt threshold has been met, causes an interrupt out to be generated from the AXI DMA.   
-  0 - No IOC Interrupt.   
-  1 - IOC Interrupt detected. Writing a 1 to this bit will clear it.
+            <spirit:description>Interrupt on Complete. When set to 1 for Scatter/Gather Mode, indicates an interrupt event was generated on completion of a descriptor. This occurs for descriptors with the End of Frame (EOF) bit set. When set to 1 for Direct Register Mode, indicates an interrupt event was generated on completion of a transfer. If the corresponding bit in S2MM_DMACR is enabled (IOC_IrqEn = 1) and if the interrupt threshold has been met, causes an interrupt out to be generated from the AXI DMA.      0 - No IOC Interrupt.      1 - IOC Interrupt detected. Writing a 1 to this bit will clear it.
 </spirit:description>
             <spirit:bitOffset>12</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4789,10 +4742,7 @@ Note: Applicable only when Scatter Gather is enabled.
           <spirit:field>
             <spirit:name>Dly_Irq</spirit:name>
             <spirit:displayName>Interrupt on Delay</spirit:displayName>
-            <spirit:description>Interrupt on Delay. When set to 1, indicates an interrupt event was generated on delay timer time out. If the corresponding bit is enabled in the S2MM_DMACR (Dly_IrqEn = 1), an interrupt out is generated from the AXI DMA.   
-  0 - No Delay Interrupt.   
-  1 - Delay Interrupt detected.1 = IOC Interrupt detected. Writing a 1 to this bit will clear it.
-Note: Applicable only when Scatter Gather is enabled. 
+            <spirit:description>Interrupt on Delay. When set to 1, indicates an interrupt event was generated on delay timer time out. If the corresponding bit is enabled in the S2MM_DMACR (Dly_IrqEn = 1), an interrupt out is generated from the AXI DMA.      0 - No Delay Interrupt.      1 - Delay Interrupt detected.1 = IOC Interrupt detected. Writing a 1 to this bit will clear it. Note: Applicable only when Scatter Gather is enabled. 
 </spirit:description>
             <spirit:bitOffset>13</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -4809,9 +4759,7 @@ Note: Applicable only when Scatter Gather is enabled.
             <spirit:name>Err_Irq</spirit:name>
             <spirit:displayName>Interrupt on Error</spirit:displayName>
             <spirit:description>Interrupt on Error. When set to 1, indicates an interrupt event was generated on error. If the corresponding bit is enabled in the S2MM_DMACR (Err_IrqEn = 1), an interrupt out is generated from the AXI DMA.
-Writing a 1 to this bit will clear it.   
-  0 - No error Interrupt.   
-  1 - Error interrupt detected.
+Writing a 1 to this bit will clear it.      0 - No error Interrupt.      1 - Error interrupt detected.
 </spirit:description>
             <spirit:bitOffset>14</spirit:bitOffset>
             <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
@@ -5119,35 +5067,6 @@ Note: This value must be greater than or equal to the largest expected packet to
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_blockmodel</spirit:name>
-        <spirit:displayName>Block Model files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:block_model</spirit:envIdentifier>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ca73b4f0</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 21:59:00 UTC 2026</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ca73b4f0</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_synthesisconstraints</spirit:name>
         <spirit:displayName>Synthesis Constraints</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
@@ -5157,11 +5076,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 21:54:13 UTC 2026</spirit:value>
+            <spirit:value>Sat Sep 19 15:33:55 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ca73b4f0</spirit:value>
+            <spirit:value>9:06acc4f8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5171,6 +5090,21 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>axi_dma</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_pkg_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_fifo_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_srl_fifo_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_axi_datamover_5_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -5183,11 +5117,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 21:54:13 UTC 2026</spirit:value>
+            <spirit:value>Sat Sep 19 15:33:55 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:91e15f7a</spirit:value>
+            <spirit:value>9:5d3e2f72</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5203,11 +5137,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 21:54:13 UTC 2026</spirit:value>
+            <spirit:value>Sat Sep 19 15:33:55 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:91e15f7a</spirit:value>
+            <spirit:value>9:5d3e2f72</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5217,6 +5151,24 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>axi_dma</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_lib_pkg_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_lib_fifo_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_lib_srl_fifo_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_axi_datamover_5_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
@@ -5229,11 +5181,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 21:54:13 UTC 2026</spirit:value>
+            <spirit:value>Sat Sep 19 15:33:55 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ca73b4f0</spirit:value>
+            <spirit:value>9:06acc4f8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5249,11 +5201,11 @@ Note: This value must be greater than or equal to the largest expected packet to
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 21:54:13 UTC 2026</spirit:value>
+            <spirit:value>Sat Sep 19 15:33:55 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ca73b4f0</spirit:value>
+            <spirit:value>9:06acc4f8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5356,7 +5308,7 @@ Note: This value must be greater than or equal to the largest expected packet to
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x1</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">1</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -8115,42 +8067,6 @@ Note: This value must be greater than or equal to the largest expected packet to
   </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
-      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>kria_bd_axi_dma_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>kria_bd_axi_dma_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>kria_bd_axi_dma_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>kria_bd_axi_dma_0_0_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>kria_bd_axi_dma_0_0_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_synthesisconstraints_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>kria_bd_axi_dma_0_0_ooc.xdc</spirit:name>
@@ -8161,16 +8077,109 @@ Note: This value must be greater than or equal to the largest expected packet to
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_axi_datamover_5_1__ref_view_fileset</spirit:name>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_pkg_1_0__ref_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/0f0c/hdl/axi_datamover_v5_1_rfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/8c68/hdl/lib_pkg_v1_0_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>axi_datamover_v5_1_38</spirit:logicalName>
+        <spirit:logicalName>lib_pkg_v1_0_4</spirit:logicalName>
       </spirit:file>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_datamover" xilinx:version="5.1" xilinx:isGenerated="true" xilinx:checksum="6adebfdc">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_pkg" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="35716901">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/1443/simulation/fifo_generator_vlog_beh.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>fifo_generator_v13_2_10</spirit:logicalName>
+        <spirit:exportedName>fifo_generator_vlog_beh</spirit:exportedName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/1443/hdl/fifo_generator_v13_2_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>fifo_generator_v13_2_10</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/1443/hdl/fifo_generator_v13_2_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>fifo_generator_v13_2_10</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="13.2" xilinx:isGenerated="true" xilinx:checksum="81b47283">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_fifo_1_0__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/0a12/hdl/lib_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>lib_fifo_v1_0_19</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_fifo" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="5f6d7079">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_srl_fifo_1_0__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/1e5a/hdl/lib_srl_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>lib_srl_fifo_v1_0_4</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_srl_fifo" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="1f351622">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>lib_cdc_v1_0_3</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_cdc" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="726cb4eb">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_axi_datamover_5_1__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>axi_datamover_v5_1_33</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_datamover" xilinx:version="5.1" xilinx:isGenerated="true" xilinx:checksum="6e70e2ba">
             <xilinx:mode xilinx:name="copy_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -8179,14 +8188,14 @@ Note: This value must be greater than or equal to the largest expected packet to
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_axi_sg_4_1__ref_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/b193/hdl/axi_sg_v4_1_rfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/6f54/hdl/axi_sg_v4_1_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>axi_sg_v4_1_21</spirit:logicalName>
+        <spirit:logicalName>axi_sg_v4_1_18</spirit:logicalName>
       </spirit:file>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_sg" xilinx:version="4.1" xilinx:isGenerated="true" xilinx:checksum="292c528b">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_sg" xilinx:version="4.1" xilinx:isGenerated="true" xilinx:checksum="625c3395">
             <xilinx:mode xilinx:name="copy_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -8195,10 +8204,10 @@ Note: This value must be greater than or equal to the largest expected packet to
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/5b02/hdl/axi_dma_v7_1_rfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>axi_dma_v7_1_38</spirit:logicalName>
+        <spirit:logicalName>axi_dma_v7_1_32</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -8210,15 +8219,105 @@ Note: This value must be greater than or equal to the largest expected packet to
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_axi_datamover_5_1__ref_view_fileset</spirit:name>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_lib_pkg_1_0__ref_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/0f0c/hdl/axi_datamover_v5_1_rfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/8c68/hdl/lib_pkg_v1_0_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>axi_datamover_v5_1_38</spirit:logicalName>
+        <spirit:logicalName>lib_pkg_v1_0_4</spirit:logicalName>
       </spirit:file>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_datamover" xilinx:version="5.1" xilinx:isGenerated="true" xilinx:checksum="a2d21498">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_pkg" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="35716901">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/09bd/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>blk_mem_gen_v8_4_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4" xilinx:isGenerated="true" xilinx:checksum="09bc3c5d">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/1443/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>fifo_generator_v13_2_10</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="13.2" xilinx:isGenerated="true" xilinx:checksum="13a34c58">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_lib_fifo_1_0__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/0a12/hdl/lib_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>lib_fifo_v1_0_19</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_fifo" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="5f6d7079">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_lib_srl_fifo_1_0__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/1e5a/hdl/lib_srl_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>lib_srl_fifo_v1_0_4</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_srl_fifo" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="1f351622">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>lib_cdc_v1_0_3</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_cdc" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="726cb4eb">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_axi_datamover_5_1__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>axi_datamover_v5_1_33</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_datamover" xilinx:version="5.1" xilinx:isGenerated="true" xilinx:checksum="6beb4cc6">
             <xilinx:mode xilinx:name="copy_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -8227,13 +8326,13 @@ Note: This value must be greater than or equal to the largest expected packet to
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_axi_sg_4_1__ref_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/b193/hdl/axi_sg_v4_1_rfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/6f54/hdl/axi_sg_v4_1_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>axi_sg_v4_1_21</spirit:logicalName>
+        <spirit:logicalName>axi_sg_v4_1_18</spirit:logicalName>
       </spirit:file>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_sg" xilinx:version="4.1" xilinx:isGenerated="true" xilinx:checksum="292c528b">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axi_sg" xilinx:version="4.1" xilinx:isGenerated="true" xilinx:checksum="625c3395">
             <xilinx:mode xilinx:name="copy_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -8254,9 +8353,9 @@ Note: This value must be greater than or equal to the largest expected packet to
         </spirit:define>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/5b02/hdl/axi_dma_v7_1_rfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>axi_dma_v7_1_38</spirit:logicalName>
+        <spirit:logicalName>axi_dma_v7_1_32</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -8607,18 +8706,20 @@ Note: This value must be greater than or equal to the largest expected packet to
     <xilinx:coreExtensions>
       <xilinx:displayName>AXI Direct Memory Access</xilinx:displayName>
       <xilinx:xpmLibraries>
-        <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>38</xilinx:coreRevision>
+      <xilinx:coreRevision>32</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_RESETN.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.MM2S_CNTRL_RESET_OUT_N.POLARITY" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.MM2S_INTROUT.PortWidth" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.MM2S_INTROUT.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.MM2S_INTROUT.SENSITIVITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.MM2S_PRMRY_RESET_OUT_N.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_CNTRL.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_CNTRL.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_CNTRL.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_CNTRL.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_CNTRL.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_CNTRL.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -8631,6 +8732,7 @@ Note: This value must be greater than or equal to the largest expected packet to
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_CNTRL.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_MM2S.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_MM2S.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_MM2S.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_MM2S.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_MM2S.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_MM2S.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -8797,18 +8899,18 @@ Note: This value must be greater than or equal to the largest expected packet to
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.MAX_BURST_LENGTH" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_READ_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_WRITE_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.MAX_BURST_LENGTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_READ_OUTSTANDING" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_READ_THREADS" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_WRITE_OUTSTANDING" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.NUM_WRITE_THREADS" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.RUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.SUPPORTS_NARROW_BURST" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.WUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_LITE_ACLK.ASSOCIATED_PORT" xilinx:valuePermission="bd"/>
@@ -8824,12 +8926,12 @@ Note: This value must be greater than or equal to the largest expected packet to
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2026.1</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="68126bb1"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="fd8ca0b9"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="02cd16c1"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="20f118aa"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="9032b49c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ffa0ec02"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="94958783"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2fb6ebaa"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="8b59c7ef"/>
     </xilinx:packagingInfo>

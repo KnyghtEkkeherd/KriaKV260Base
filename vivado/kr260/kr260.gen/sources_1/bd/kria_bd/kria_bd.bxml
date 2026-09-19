@@ -2,11 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="kria_bd" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1789163653"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1789163653"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1789163653"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1789163653"/>
-    <Generation Name="INSTANTIATION_TEMPLATE" State="GENERATED" Timestamp="1789163653"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1789832060"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1789832060"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1789832060"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1789832060"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/kria_bd.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -51,21 +50,6 @@
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="kria_bd.vho" Type="VhdlTemplate">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="kria_bd.veo" Type="VTemplate">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="kria_bd_sv.sveo" Type="SystemVerilogTemplate">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
     </FileCollection>
